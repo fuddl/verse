@@ -1,0 +1,250 @@
+include concentric
+include label
+include centroid
+include asteroid
+
+doctype svg
+// height="1400" width="1200"
+svg(viewBox="0 -20 100 140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid")
+  style
+    :sass
+      @font-face
+        font-family: TallDeco
+        src: url("assets/TALLDECO.TTF")
+      @font-face
+        font-family: Sexsmith
+        src: url("assets/sexsmith/sexsmith.ttf")
+      @font-face
+        font-family: AnchorJack
+        src: url("assets/AnchorJack.ttf")
+      @font-face
+        font-family: 'Chi-Town'
+        src: url("assets/Chi-Town-Regular.otf")
+      @font-face
+        font-family: 'Elemental End'
+        src: url("assets/elementalend/Elemental%20End.ttf")
+      @font-face
+        font-family: 'Omnibus'
+        src: url("assets/TT_OMNIB.ttf")
+      @font-face
+        font-family: 'Insane Rodeo'
+        src: url("assets/ifc_insane_rodeo/IFC%20INSANE%20RODEO.ttf")
+      @font-face
+        font-family: 'Dai-Atlas'
+        src: url("assets/dai_atlas/Dai-Atlas.otf")
+
+      @font-face
+        font-family: 'Orbitron'
+        font-style: normal
+        font-weight: 400
+        src: url('assets/Orbitron/Orbitron-Regular.ttf')
+
+      @font-face
+        font-family: 'Orbitron'
+        font-style: normal
+        font-weight: 500
+        src: url('assets/Orbitron/Orbitron-Medium.ttf')
+
+      @font-face
+        font-family: 'Orbitron'
+        font-style: normal
+        font-weight: 700
+        src: url('assets/Orbitron/Orbitron-Bold.ttf')
+
+      @font-face
+        font-family: 'Orbitron'
+        font-style: normal
+        font-weight: 900
+        src: url('assets/Orbitron/Orbitron-Black.ttf')
+      text
+        font-family: 'Orbitron'
+        text-shadow: 0 0 .5em black, 0 0 .5em black
+        font-weight: 900
+
+      .circular-marker__text--big
+        font-weight: 700
+
+  circle(cx=50 cy=50 r=60 fill="black")
+  
+  +asteroid-belt(cx=50, cy=50, particles=2000, spread=10, r=54)
+  +concentric-grid(cx=50 cy=50 min-r=48 r=60 radial-subdivisions=32  min-arc=5.625 stroke="DarkSlateGrey" stroke-width=.1 concentric-subdivisions=1)
+  +circular-marker(cx=50 cy=50 x=50 y=105 style="text-transform: uppercase;font-weight: 100;" fill="DarkSlateGrey" font-size=2) Oort cloud
+  
+  g#rim
+    +concentric-grid(cx=50 cy=50 min-r=32 r=48 min-arc=5.625 radial-subdivisions=32 stroke="red" stroke-width=.1 concentric-subdivisions=1)
+    +circular-marker(cx=50 cy=50 x=18 y=64 style="text-transform: uppercase" fill="white", href="assets/planets16_high_resolution/planet22.png") Cortex Relay 7
+    +circular-marker(cx=50 cy=50 x=50 y=92 style="text-transform: uppercase;font-weight: 100;" fill="red" font-size=2, subtitle="轮缘") Rim Space
+
+  +asteroid-belt(cx=50, cy=50, particles=200, spread=1.2, r=17)
+  +circular-marker(cx=50 cy=50 x=39.5 y=37 style="text-transform: uppercase" fill="silver", font-size=.35) The Halo
+  +circular-marker(cx=50 cy=50 x=57.7 y=65 style="text-transform: uppercase" fill="silver", font-size=.35) The Halo
+
+  g#border-space
+    +concentric-grid(cx=50 cy=50 min-r=16 r=32 radial-subdivisions=32 stroke="orange" stroke-width=.1 concentric-subdivisions=1)
+    +circular-marker(cx=50 cy=50 x=50 y=24 style="font-weight: 100; text-transform: uppercase" fill="orange" font-size=2 subtitle="边境空间") Border Space
+    +circular-marker(cx=50 cy=50 x=44.7 y=73.1 style="text-transform: uppercase;font-weight: 100;" fill="orange" font-size=2 subtitle="边境空间") Border Space
+
+  
+  g#white-sun
+    +concentric-grid(cx=50 cy=50 min-r=2 r=5 radial-subdivisions=2 concentric-subdivisions=0 stroke="SteelBlue" stroke-width=.1)
+    +concentric-grid(cx=50 cy=50 min-arc=45 min-r=5 r=8 radial-subdivisions=4 stroke="SteelBlue" stroke-width=.1)
+    +concentric-grid(cx=50 cy=50 min-arc=22.5 min-r=8 r=12 radial-subdivisions=8 stroke="SteelBlue" stroke-width=.1)
+    +concentric-grid(cx=50 cy=50 min-arc=11.25 min-r=12 r=16 radial-subdivisions=16 stroke="SteelBlue" stroke-width=.1)
+    +circular-marker(cx=50 cy=50 x=42 y=56 font-size=1 style="font-family: Sexsmith; text-transform: uppercase" fill="white", href="assets/planets16_high_resolution/planet22.png" subtitle="Shipworks") Osiris
+    +circular-marker(cx=50 cy=50 x=47.5 y=52 style="text-transform: uppercase" fill="white", href="assets/planets16_high_resolution/planet22.png") Londinium
+    +circular-marker(cx=50 cy=50 x=50 y=56 style="text-transform: uppercase" fill="white", href="assets/planets16_high_resolution/planet22.png") Liann Juin
+    +circular-marker(cx=50 cy=50 x=50 y=46.5 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_39.png") Bernadette
+    +circular-marker(cx=50 cy=50 x=55.6 y=53 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_39.png") Shinon
+    +circular-marker(cx=50 cy=50 x=44 y=42 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_39.png") Bellerophon
+    +circular-marker(cx=50 cy=50 x=59 y=61 style="text-transform: uppercase" fill="white", href="assets/hd-hq-2d-planets-hi-res/City1.png") Ariel
+    +circular-marker(cx=50 cy=50 x=37 y=43 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_39.png") Valentine
+    +circular-marker(cx=65 cy=10 x=50 y=50 style="text-transform: uppercase" fill="white", size=3 href="assets/main_sequence_high_resolution/star_white02.png" subtitle="西方白虎") White Sun
+
+  g#lux
+    circle(fill="black" cx=50 cy=36 r=4)
+    +concentric-grid(cx=50 cy=36 r=4 stroke="SteelBlue" stroke-width=.1, radial-subdivisions=2)
+    +circular-marker(cx=50 cy=36 x=49 y=33.6 style="font-family: TallDeco;text-transform: uppercase" fill="white", href="assets/hd-hq-2d-planets-hi-res/Terran1.png") Persephone
+    +circular-marker(cx=50 cy=36 x=51 y=38 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Pelorum
+    +circular-marker(cx=50 cy=50 x=50 y=36 style="text-transform: uppercase" fill="white", size=2.5 href="assets/main_sequence_high_resolution/star_yellow04.png") Lux
+  
+  g#qin-shi-huang
+    - let cx = 52.4;
+    - let cy = 61.8;
+    - r = 2;
+    circle(fill="black" cx=cx cy=cy r=r stroke="SteelBlue" stroke-width=.1)
+    +circular-marker(cx=cx cy=cy x=cx y=cy-1 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Santo
+    +circular-marker(cx=50 cy=50 x=cx y=cy style="text-transform: uppercase" font-size=.7 fill="white", href="assets/main_sequence_high_resolution/star_yellow02.png" size=1.5 subtitle="Qin Shi Huang") 秦始皇
+  
+  g#georgia
+    - cx = 22.65;
+    circle(fill="black" cx=cx cy=50 r=12 stroke-width=.1)
+    +concentric-grid(cx=cx cy=50 min-r=2 r=5 min-arc=90 radial-subdivisions=2 stroke="orange" stroke-width=.1)
+    +concentric-grid(cx=cx cy=50 min-r=5 r=8 min-arc=45 radial-subdivisions=4 stroke="orange" stroke-width=.1)
+    +concentric-grid(cx=cx cy=50 min-r=8 r=12 min-arc=22.5 radial-subdivisions=8 stroke="orange" stroke-width=.1)
+    +circular-marker(cx=cx cy=50 x=19.5 y=50 style="font-family: 'Chi-Town'; text-transform: lowercase" fill="white", href="assets/planet15/planet_38.png") Regina
+    +circular-marker(cx=cx cy=50 x=32.5 y=51 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Athens
+    +circular-marker(cx=cx cy=50 x=29 y=42 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Newhope
+    +circular-marker(cx=cx cy=50 x=24 y=44 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Ithaca
+    +circular-marker(cx=cx cy=50 x=21 y=44 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Priam
+    +circular-marker(cx=cx cy=50 x=16.5 y=48 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Kerry
+    +circular-marker(cx=cx cy=50 x=12 y=50 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Three Hills
+    +circular-marker(cx=cx cy=50 x=26 y=50 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Ezra
+    +circular-marker(cx=cx cy=50 x=cx y=56.25 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Boros
+    +circular-marker(cx=50 cy=50 x=cx y=50 style="text-transform: uppercase" fill="white", href="assets/main_sequence_high_resolution/star_yellow02.png", size=3, subtitle="黄龙") Georgia
+  
+  g#murphy
+    - cx = 27;
+    - cy = 63;
+    - ex = 3;
+    circle(fill="black" cx=cx cy=cy r=ex stroke-width=.1)
+    +concentric-grid(cx=cx cy=cy r=ex min-arc=86.5 radial-subdivisions=3 stroke="orange" stroke-width=.1)
+    +circular-marker(cx=50 cy=50 x=cx y=cy style="text-transform: uppercase" fill="white", href="assets/main_sequence_high_resolution/star_red03.png", size=3) Murphy
+    +circular-marker(cx=cx cy=cy x=25.4 y=63.6 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Shadow
+    +circular-marker(cx=cx cy=cy x=28.5 y=63.6 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Hera
+    +circular-marker(cx=cx cy=cy x=26.8 y=61.15 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Aphrodite
+  
+  g#red-sun
+    - cx = 76;
+    - cy = 50;
+    circle(fill="black" cx=cx  cy=cy r=12 stroke-width=.1)
+
+    +asteroid-belt(cx=cx, cy=cy, particles=500, spread=1.2, r=4.5)
+    +circular-marker(cx=cx cy=cy x=cx-3 y=cy+3 style="text-transform: uppercase" fill="silver", font-size=.35) Motherlode
+
+    +concentric-grid(cx=cx cy=cy min-r=2 r=5 min-arc=90 radial-subdivisions=2 stroke="orange" stroke-width=.1)
+    +concentric-grid(cx=cx cy=cy min-r=5 r=8 min-arc=45 radial-subdivisions=4 stroke="orange" stroke-width=.1)
+    +concentric-grid(cx=cx cy=cy min-r=8 r=12 min-arc=22.5 radial-subdivisions=8 stroke="orange" stroke-width=.1)
+    +circular-marker(cx=cx cy=cy x=cx-7 y=cy-7 style="font-family: AnchorJack;" fill="white", href="assets/planets16_high_resolution/planet22.png") Space Bazaar
+    +circular-marker(cx=50 cy=50 x=cx y=cy size=3 style="text-transform: uppercase" fill="white", href="assets/main_sequence_high_resolution/star_red04.png", subtitle="南方朱雀") Red Sun
+    +circular-marker(cx=cx cy=cy x=cx-3 y=cy style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png" subtitle="Jiangyn") 江阴
+    +circular-marker(cx=cx cy=cy x=cx+3.5 y=cy style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") New Melburne
+    +circular-marker(cx=cx cy=cy x=cx+6 y=cy+2 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Harvest
+    +circular-marker(cx=cx cy=cy x=cx+8 y=cy+6 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Anson's World
+    +circular-marker(cx=cx cy=cy x=cx-2 y=cy+6 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") St. Albans
+    +circular-marker(cx=cx cy=cy x=cx-6 y=cy-2 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Greenleaf
+    +circular-marker(cx=cx cy=cy x=cx+7 y=cy-7 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Jubilee
+
+  g#heinlein
+    - cx = 67.5;
+    - cy = 64;
+    circle(fill="black" cx=cx cy=cy r=5 stroke-width=.1)
+    +concentric-grid(cx=cx cy=cy min-r=2 r=5 radial-subdivisions=2 stroke="orange" stroke-width=.1, min-arc=36)
+    +circular-marker(cx=50 cy=50 x=cx y=cy size=1.6 style="text-transform: uppercase" fill="white", href="assets/main_sequence_high_resolution/star_red04.png") Heinlein
+    +circular-marker(cx=cx cy=cy x=69 y=67 style="font-family: 'Insane Rodeo'; text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png", subtitle="Amunitions") Silverhold
+    +circular-marker(cx=cx cy=cy x=67 y=61 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Triumph
+  
+  g#himinbjoerg
+    - cx = 72;
+    - cy = 32;
+    circle(fill="black" cx=cx cy=cy r=5 stroke-width=.1)
+    +concentric-grid(cx=cx cy=cy min-r=2 r=5 radial-subdivisions=2 stroke="orange" stroke-width=.1)
+    +circular-marker(cx=50 cy=50 x=cx y=cy style="text-transform: uppercase" fill="white", font-size=.7 size=2 href=href="assets/main_sequence_high_resolution/star_red01.png") Himinbjörg
+    +circular-marker(cx=cx cy=cy x=cx+2.5 y=cy+2.5 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Aesir
+    +circular-marker(cx=cx cy=cy x=cx-2.5 y=cy-2.8 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Brisengamen
+    
+    
+  g#kalidasa
+    - let arc = 115;
+    - let arcoff = 45;
+    - cx = 65;
+    - cy = 10;
+    circle(fill="black" cx=cx cy=cy r=16 stroke-width=.1)
+    +concentric-grid(cx=cx cy=cy min-r=2 r=5 min-arc=arc radial-subdivisions=2 stroke="red" stroke-width=.1)
+    +concentric-grid(cx=cx cy=cy min-r=5 r=8 min-arc=arc-arcoff radial-subdivisions=4 stroke="red" stroke-width=.1)
+    +concentric-grid(cx=cx cy=cy min-r=8 r=12 min-arc=arc-(arcoff/2) radial-subdivisions=8 stroke="red" stroke-width=.1)
+    +concentric-grid(cx=cx cy=cy min-r=12 r=16 min-arc=arc-(arcoff/3) radial-subdivisions=16 stroke="red" stroke-width=.1)
+    +circular-marker(cx=50 cy=50 x=cx y=cy style="text-transform: uppercase" fill="white", font-size=.7 size=3 href="assets/main_sequence_high_resolution/star_yellow02.png" subtitle="玄武") Kalidasa
+    +circular-marker(cx=cx cy=cy x=56 y=20 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Zeus
+    +circular-marker(cx=cx cy=cy x=60 y=23 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Djinn's Bane
+    +circular-marker(cx=cx cy=cy x=67 y=20 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Zephyr
+    +circular-marker(cx=cx cy=cy x=60 y=18 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") New Kashmir
+    +circular-marker(cx=cx cy=cy x=70.8 y=13 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Constance
+    +circular-marker(cx=cx cy=cy x=64 y=6.46 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Verbana
+    +circular-marker(cx=cx cy=cy x=68 y=10 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Sho-Je Downs
+    +circular-marker(cx=cx cy=cy x=61 y=14 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Angel
+    +circular-marker(cx=cx cy=cy x=61 y=5 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Heaven
+    +circular-marker(cx=cx cy=cy x=55 y=11 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Whittier
+    +circular-marker(cx=cx cy=cy x=51 y=10 style="font-family: 'Omnibus'; text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Beaumonde
+    +circular-marker(cx=cx cy=cy x=56 y=5 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Aberdeen
+    +circular-marker(cx=cx cy=cy x=54 y=.5 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Sailsburry
+  
+  g#penglai
+    - cx = 80;
+    - cy = 23;
+    circle(fill="black" cx=cx cy=cy r=5 stroke-width=.1)
+    +concentric-grid(cx=cx cy=cy min-r=2 r=5 radial-subdivisions=2 stroke="red" stroke-width=.1)
+    +circular-marker(cx=50 cy=50 x=cx y=cy style="text-transform: uppercase" fill="white", font-size=.7 size=3 href="assets/main_sequence_high_resolution/star_yellow01.png" subtitle="蓬萊仙島") Penglai
+    +circular-marker(cx=cx cy=cy x=cx+2.5 y=cy+2.5 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Newhall
+    +circular-marker(cx=cx cy=cy x=cx-2.5 y=cy-2.8 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Belux
+  
+  g#blue-sun
+    - cx = 17;
+    - cy = 83;
+    circle(fill="black" cx=cx cy=cy r=12 stroke-width=.1)
+    +asteroid-belt(cx=cx, cy=cy, particles=500, spread=1.2, r=8.5)
+    +circular-marker(cx=cx cy=cy x=cx-6 y=cy+6 style="text-transform: uppercase" fill="silver", font-size=.35) Uroborus Belt
+    +circular-marker(cx=cx cy=cy x=cx+6 y=cy-6 style="text-transform: uppercase" fill="silver", font-size=.35) Uroborus Belt
+    +concentric-grid(cx=cx cy=cy min-r=2 r=5 min-arc=45 radial-subdivisions=2 stroke="red" stroke-width=.1)
+    +concentric-grid(cx=cx cy=cy min-r=5 r=8 radial-subdivisions=4 stroke="red" stroke-width=.1)
+    +concentric-grid(cx=cx cy=cy min-r=8 r=12 min-arc=22.5 radial-subdivisions=8 stroke="red" stroke-width=.1)
+    +circular-marker(cx=50 cy=50 x=cx y=cy size=3 style="text-transform: uppercase" fill="white", href="assets/main_sequence_high_resolution/star_blue03.png" subtitle="青龍" font-size=.7) Blue Sun
+    +circular-marker(cx=cx cy=cy x=19.5 y=81 style="font-family: 'Omnibus'; text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Meridian
+    +circular-marker(cx=cx cy=cy x=15 y=85.5 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") New Canaan
+    +circular-marker(cx=cx cy=cy x=18.5 y=89 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Muir
+    +circular-marker(cx=cx cy=cy x=20 y=77 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Fury
+    +circular-marker(cx=cx cy=cy x=27 y=82 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Deadwood
+    +circular-marker(cx=cx cy=cy x=15.5 y=74 style="text-transform: uppercase" fill="white", href="assets/hd-hq-2d-planets-hi-res/Lava1.png") Dragons Egg
+  
+  g#reaver-space
+    - cx = 3;
+    - cy = 62;
+    - r = 7.5;
+    circle(fill="black" cx=cx cy=cy r=r stroke-width=.1)
+    +scrap-belt(cx=cx, cy=cy, particles=500, spread=4, r=5)
+    +concentric-grid(cx=cx cy=cy min-r=3 r=r radial-subdivisions=12 stroke="red" stroke-width=.1)
+    +circular-marker(cx=50 cy=50 x=cx y=cy style="text-transform: uppercase" fill="white", size=2 href="assets/main_sequence_high_resolution/star_red03.png") Burnham
+    +circular-marker(cx=cx cy=cy x=-1.5 y=62 style="text-transform: uppercase;font-weight: 100;" fill="red" font-size=1.5 subtitle="Reaver Space") Burnham Quadrant
+    +circular-marker(cx=cx cy=cy x=4 y=63 style="text-transform: uppercase" fill="white", href="assets/planet15/planet_38.png") Miranda
+
+  polygon(points="2,5 1,4 1,2 2,1 4,1 5,2 5,4 4,5" stroke="red" stroke-width=".5" fill="none")
+
