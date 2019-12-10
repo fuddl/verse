@@ -1,0 +1,95 @@
+
+@font-face {
+  font-family: TallDeco;
+  src: url("assets/TALLDECO.TTF");
+}
+
+@font-face {
+  font-family: Sexsmith;
+  src: url("assets/sexsmith/sexsmith.ttf");
+}
+
+@font-face {
+  font-family: AnchorJack;
+  src: url("assets/AnchorJack.ttf");
+}
+
+@font-face {
+  font-family: 'Chi-Town';
+  src: url("assets/Chi-Town-Regular.otf");
+}
+
+@font-face {
+  font-family: 'Elemental End';
+  src: url("assets/elementalend/Elemental%20End.ttf");
+}
+
+@font-face {
+  font-family: 'Omnibus';
+  src: url("assets/TT_OMNIB.ttf");
+}
+
+@font-face {
+  font-family: 'Insane Rodeo';
+  src: url("assets/ifc_insane_rodeo/IFC%20INSANE%20RODEO.ttf");
+}
+
+@font-face {
+  font-family: 'Dai-Atlas';
+  src: url("assets/dai_atlas/Dai-Atlas.otf");
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 400;
+  src: url("assets/Orbitron/Orbitron-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 500;
+  src: url("assets/Orbitron/Orbitron-Medium.ttf");
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 700;
+  src: url("assets/Orbitron/Orbitron-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 900;
+  src: url("assets/Orbitron/Orbitron-Black.ttf");
+}
+
+text {
+  font-family: 'Orbitron';
+  text-shadow: 0 0 .5em black, 0 0 .5em black;
+  font-weight: 900;
+}
+
+
+body {
+  margin: 0;
+}
+
+svg {
+  vertical-align: bottom;
+}
+
+[hidden] {
+  display: none;
+}
+
+.draggable {
+  cursor: grab;
+}
+
+.dragging {
+  cursor: grabbing;
+}
