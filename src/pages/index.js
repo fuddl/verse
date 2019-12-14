@@ -3,11 +3,18 @@ import RadialGrid from '../components/radial-grid.js'
 import CircularMarker from '../components/circular-marker.js'
 import AsteroidBelt from '../components/asteroids.js'
 import ScrapBelt from '../components/asteroids.js'
+import Slot from '../components/card.js'
+import Ship from '../components/ship.js'
 import Map from "../components/map"
 
 let c = {
   x: 50,
   y: 50,
+}
+
+let pc = {
+  x: 2189,
+  y: 2189,
 }
 
 const pi = Math.PI;
@@ -20,6 +27,28 @@ function place(dist, a, center) {
   }
 }
 
+let slots = [];
+let slotNr = 52; 
+let slotArc = pi*2/slotNr;
+function radToDec(rad) {
+  return rad / .0174533;
+}
+
+for (let j = 0; j < slotNr; j++) {
+  let slotloc = place(620, slotArc*j, pc);
+  let transform = 'rotate(' + (radToDec(slotArc*j)-90) + ' ' + slotloc.x + ' ' + slotloc.y + ')';
+  slots.push(<Slot transform={ transform } x={ slotloc.x } y={ slotloc.y } color={ 'white' } text={ "Crew" } />)
+}
+
+let ships = [];
+let shipNr = 13; 
+let shipArc = pi*2/shipNr;
+
+for (let j = 0; j < slotNr; j++) {
+  let shiploc = place(460, shipArc*j, pc);
+  let transform = 'rotate(' + (radToDec(shipArc*j)-90) + ' ' + shiploc.x + ' ' + shiploc.y + ')';
+  ships.push(<Ship transform={ transform } x={ shiploc.x } y={ shiploc.y } color={ 'white' } text={ "Crew" } />)
+}
 
 let qin = place(12, pi*.47);
 let santo = place(2, pi*1.5, qin);
@@ -65,7 +94,7 @@ let qinShiHuang = (
 const IndexPage = () => (
   <>
     <link rel="stylesheet" href="map.css" />
-    <Map width="100" height="140" zoom={ 10 } />
+    <Map width="1000" height="1400" zoom={ .1 } />
     <svg hidden>
       <defs>
         <symbol id="grid" viewBox="0 -11 100 121">
@@ -85,9 +114,9 @@ const IndexPage = () => (
             />
             <CircularMarker
               cx={ 50 }
-              cy={50}
-              x={18}
-              y={64}
+              cy={ 50 }
+              x={ 18 }
+              y={ 64 }
               style={ { textTransform: "uppercase" } }
               fill="white"
               title="Cortex Relay 7"
@@ -242,10 +271,14 @@ const IndexPage = () => (
               <ScrapBelt cx={ 3 } cy={ 62 } particles={ 500 } spread={ 4 } r={ 5 }></ScrapBelt>
               <RadialGrid cx={ 3 } cy={ 62 } minR={ 3 } r={ 7.5 } radialSubdivisions={ 12 } stroke="red" stroke-width="0.1"></RadialGrid>
               <CircularMarker cx={ 50 } cy={ 50 } x={ 3 } y={ 62 } style={ { textTransform: 'uppercase' } } fill="white" size="2" href="assets/main_sequence_high_resolution/star_red03.png" title="Burnham"/>
-              <CircularMarker cx={ 3 } cy={ 62 } x={ -1.5 } y={ 62 } style={ { textTransform: 'uppercase', fontWeight: '100' } } fill="red" font-size="1.5" subtitle="Reaver Space" title="Burnham Quadrant"/>
+              <CircularMarker cx={ 3 } cy={ 62 } x={ -4.6 } y={ 65 } style={ { textTransform: 'uppercase', fontWeight: '100' } } fill="red" font-size="1.5" subtitle="Reaver Space" title="Burnham Quadrant"/>
               <CircularMarker cx={ 3 } cy={ 62 } x={ 4 } y={ 63 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Miranda"/>
             </g>
           </g>
+        </symbol>
+        <symbol id="slots">
+          { slots }
+          { ships }
         </symbol>
       </defs>
     </svg>

@@ -82,18 +82,19 @@ class Map extends React.Component {
 
     return (
       <svg
-        width={w}
-        height={h}
-        viewBox={vb.join(' ')}
-        onMouseUp={this.mouseUpHandle.bind(this)}
-        onMouseDown={this.mouseDownHandle.bind(this)}
-        onMouseMove={this.mouseMoveHandle.bind(this)}
-        onWheel = {this.handleZoom.bind(this)}
+        width={ w }
+        height={ h }
+        viewBox={ vb.join(' ') }
+        onMouseUp={ this.mouseUpHandle.bind(this) }
+        onMouseDown={ this.mouseDownHandle.bind(this) }
+        onMouseMove={ this.mouseMoveHandle.bind(this) }
+        onWheel = { this.handleZoom.bind(this) }
         className={ this.state.dragging ? 'dragging' : 'draggable' }
         data-zoom={ z }
        >
         { background }
-        <use href="#grid" x="0" y="0" height="100" width="140"/>
+        <ause href="#grid" x="0" y="0" height="100" width="140"/>
+        <use href="#slots" x="0" y="0" height="11189mm" width="11189mm"/>
       </svg>
     )
   }
