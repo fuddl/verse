@@ -186,7 +186,15 @@ let whiteSun = (
 );
 
 let georgiaC = place(27.35, pi);
-let ezra = place(3.4, 0, georgiaC);
+let ezra = place(3.4, pi*.15, georgiaC);
+let regina = place(3, pi*1.05, georgiaC);
+let athens = place(9, 0, georgiaC);
+let newhope = place(10, pi*1.75, georgiaC);
+let ithaca = place(5.8, pi*1.65, georgiaC);
+let priam = place(6.3, pi*1.35, georgiaC);
+let kerry = place(6.5, pi*.85, georgiaC);
+let threeHills = place(10.5, pi*1, georgiaC);
+let boros = place(6.2, pi*.5, georgiaC);
 
 let georgia = (
   <g id="georgia">
@@ -194,15 +202,15 @@ let georgia = (
     <RadialGrid cx={ georgiaC.x } cy={ georgiaC.y } minR={ 2 } r="5" minArc={ 90 } radialSubdivisions={ 2 } stroke="orange" stroke-width="0.1"></RadialGrid>
     <RadialGrid cx={ georgiaC.x } cy={ georgiaC.y } minR={ 5 } r="8" minArc={ 45 } radialSubdivisions={ 4 } stroke="orange" stroke-width="0.1"></RadialGrid>
     <RadialGrid cx={ georgiaC.x } cy={ georgiaC.y } minR={ 8 } r="12" minArc={ 22.5 } radialSubdivisions={ 8 } stroke="orange" stroke-width="0.1"></RadialGrid>
-    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ 19.5 } y={ 50 } style={ { fontFamily: 'Chi-Town', textTransform: 'lowercase' } } fill="white" href="assets/planet15/planet_38.png" title="Regina"/>
-    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ 32.5 } y={ 51 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Athens"/>
-    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ 29 } y={ 42 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Newhope"/>
-    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ 24 } y={ 44 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Ithaca"/>
-    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ 21 } y={ 44 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Priam"/>
-    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ 16.5 } y={ 48 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Kerry"/>
-    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ 12 } y={ 50 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Three Hills"/>
-    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ ezra.x } y={ ezra.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Ezra"/>
-    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ 22.65 } y={ 56.25 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Boros"/>
+    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ regina.x } y={ regina.y } style={ { fontFamily: 'Chi-Town', textTransform: 'lowercase' } } fill="white" href="assets/planet15/planet_41.png" title="Regina"/>
+    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ athens.x } y={ athens.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_44.png" title="Athens"/>
+    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ newhope.x } y={ newhope.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Newhope"/>
+    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ ithaca.x } y={ ithaca.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_43.png" title="Ithaca"/>
+    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ priam.x } y={ priam.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_46.png" title="Priam"/>
+    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ kerry.x } y={ kerry.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_45.png" title="Kerry"/>
+    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ threeHills.x } y={ threeHills.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_36.png" title="Three Hills"/>
+    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ ezra.x } y={ ezra.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_35.png" title="Ezra"/>
+    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ boros.x } y={ boros.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_37.png" title="Boros"/>
     <CircularMarker cx={ c.x } cy={ c.y } x={ georgiaC.x } y={ georgiaC.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/main_sequence_high_resolution/star_yellow02.png" size="3" subtitle="黄龙" title="Georgia"/>
   </g>
 );
