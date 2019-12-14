@@ -154,6 +154,9 @@ let liannJuin = place(6, pi*.55);
 let bellerophon = place(10, pi*1.25);
 let ariel = place(14.5, pi*.25);
 let valentine = place(13.4, pi*1.12);
+let lux = place(14, pi*1.5);
+let persephone = place(2.7, pi*1.5, lux);
+let pelorum = place(2.1, pi*.25, lux);
 
 let whiteSun = (
   <g id="white-sun">
@@ -171,6 +174,36 @@ let whiteSun = (
     <CircularMarker cx={ c.x } cy={ c.y } x={ ariel.x } y={ ariel.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/hd-hq-2d-planets-hi-res/City1.png" title="Ariel"/>
     <CircularMarker cx={ c.x } cy={ c.y } x={ valentine.x } y={ valentine.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_39.png" title="Valentine"/>
     <CircularMarker cx={ 65 } cy={ 10 } x={ c.x } y={ c.y } style={ { textTransform: 'uppercase' } } fill="white" size="3" href="assets/main_sequence_high_resolution/star_white02.png" subtitle="西方白虎" title="White Sun"/>
+    <g id="lux">
+      <circle fill="black" cx={ lux.x } cy={ lux.y } r="4"></circle>
+      <RadialGrid cx={ lux.x } cy={ lux.y } r="4" stroke="SteelBlue" stroke-width="0.1" radialSubdivisions={ 2 }></RadialGrid>
+      <CircularMarker cx={ lux.x } cy={ lux.y } x={ persephone.x } y={ persephone.y } style={ { fontFamily: 'TallDeco', textTransform: 'uppercase' } } fill="white" href="assets/hd-hq-2d-planets-hi-res/Terran1.png" title="Persephone"/>
+      <CircularMarker cx={ lux.x } cy={ lux.y } x={ pelorum.x } y={ pelorum.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Pelorum"/>
+      <CircularMarker cx={ lux.x } cy={ lux.y } x={ 50 } y={ 36 } style={ { textTransform: 'uppercase' } } fill="white" size="2.5" href="assets/main_sequence_high_resolution/star_yellow04.png" title="Lux"/>
+    </g>
+    { qinShiHuang }
+  </g>
+);
+
+let georgiaC = place(27.35, pi);
+let ezra = place(3.4, 0, georgiaC);
+
+let georgia = (
+  <g id="georgia">
+    <circle fill="black" cx={ georgiaC.x } cy={ georgiaC.y } r="12" />
+    <RadialGrid cx={ georgiaC.x } cy={ georgiaC.y } minR={ 2 } r="5" minArc={ 90 } radialSubdivisions={ 2 } stroke="orange" stroke-width="0.1"></RadialGrid>
+    <RadialGrid cx={ georgiaC.x } cy={ georgiaC.y } minR={ 5 } r="8" minArc={ 45 } radialSubdivisions={ 4 } stroke="orange" stroke-width="0.1"></RadialGrid>
+    <RadialGrid cx={ georgiaC.x } cy={ georgiaC.y } minR={ 8 } r="12" minArc={ 22.5 } radialSubdivisions={ 8 } stroke="orange" stroke-width="0.1"></RadialGrid>
+    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ 19.5 } y={ 50 } style={ { fontFamily: 'Chi-Town', textTransform: 'lowercase' } } fill="white" href="assets/planet15/planet_38.png" title="Regina"/>
+    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ 32.5 } y={ 51 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Athens"/>
+    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ 29 } y={ 42 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Newhope"/>
+    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ 24 } y={ 44 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Ithaca"/>
+    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ 21 } y={ 44 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Priam"/>
+    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ 16.5 } y={ 48 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Kerry"/>
+    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ 12 } y={ 50 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Three Hills"/>
+    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ ezra.x } y={ ezra.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Ezra"/>
+    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ 22.65 } y={ 56.25 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Boros"/>
+    <CircularMarker cx={ c.x } cy={ c.y } x={ georgiaC.x } y={ georgiaC.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/main_sequence_high_resolution/star_yellow02.png" size="3" subtitle="黄龙" title="Georgia"/>
   </g>
 );
 
@@ -186,30 +219,7 @@ const IndexPage = () => (
           { halo }
           { border }
           { whiteSun }
-          <g id="lux">
-            <circle fill="black" cx={ 50 } cy={ 36 } r="4"></circle>
-            <RadialGrid cx={ 50 } cy={ 36 } r="4" stroke="SteelBlue" stroke-width="0.1" radialSubdivisions={ 2 }></RadialGrid>
-            <CircularMarker cx={ 50 } cy={ 36 } x={ 49 } y={ 33.6 } style={ { fontFamily: 'TallDeco', textTransform: 'uppercase' } } fill="white" href="assets/hd-hq-2d-planets-hi-res/Terran1.png" title="Persephone"/>
-            <CircularMarker cx={ 50 } cy={ 36 } x={ 51 } y={ 38 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Pelorum"/>
-            <CircularMarker cx={ 50 } cy={ 50 } x={ 50 } y={ 36 } style={ { textTransform: 'uppercase' } } fill="white" size="2.5" href="assets/main_sequence_high_resolution/star_yellow04.png" title="Lux"/>
-          </g>
-          { qinShiHuang }
-          <g id="georgia">
-            <circle fill="black" cx={ 22.65 } cy={ 50 } r="12" stroke-width="0.1"></circle>
-            <RadialGrid cx={ 22.65 } cy={ 50 } minR={ 2 } r="5" minArc={ 90 } radialSubdivisions={ 2 } stroke="orange" stroke-width="0.1"></RadialGrid>
-            <RadialGrid cx={ 22.65 } cy={ 50 } minR={ 5 } r="8" minArc={ 45 } radialSubdivisions={ 4 } stroke="orange" stroke-width="0.1"></RadialGrid>
-            <RadialGrid cx={ 22.65 } cy={ 50 } minR={ 8 } r="12" minArc={ 22.5 } radialSubdivisions={ 8 } stroke="orange" stroke-width="0.1"></RadialGrid>
-            <CircularMarker cx={ 22.65 } cy={ 50 } x={ 19.5 } y={ 50 } style={ { fontFamily: 'Chi-Town', textTransform: 'lowercase' } } fill="white" href="assets/planet15/planet_38.png" title="Regina"/>
-            <CircularMarker cx={ 22.65 } cy={ 50 } x={ 32.5 } y={ 51 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Athens"/>
-            <CircularMarker cx={ 22.65 } cy={ 50 } x={ 29 } y={ 42 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Newhope"/>
-            <CircularMarker cx={ 22.65 } cy={ 50 } x={ 24 } y={ 44 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Ithaca"/>
-            <CircularMarker cx={ 22.65 } cy={ 50 } x={ 21 } y={ 44 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Priam"/>
-            <CircularMarker cx={ 22.65 } cy={ 50 } x={ 16.5 } y={ 48 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Kerry"/>
-            <CircularMarker cx={ 22.65 } cy={ 50 } x={ 12 } y={ 50 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Three Hills"/>
-            <CircularMarker cx={ 22.65 } cy={ 50 } x={ 26 } y={ 50 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Ezra"/>
-            <CircularMarker cx={ 22.65 } cy={ 50 } x={ 22.65 } y={ 56.25 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Boros"/>
-            <CircularMarker cx={ 50 } cy={ 50 } x={ 22.65 } y={ 50 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/main_sequence_high_resolution/star_yellow02.png" size="3" subtitle="黄龙" title="Georgia"/>
-          </g>
+          { georgia }
           <g id="murphy">
             <circle fill="black" cx={ 27 } cy={ 63 } r="3" stroke-width="0.1"></circle>
             <RadialGrid cx={ 27 } cy={ 63 } r="3" minArc={ 86.5 } radialSubdivisions={ 3 } stroke="orange" stroke-width="0.1"></RadialGrid>
