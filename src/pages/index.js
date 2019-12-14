@@ -207,6 +207,39 @@ let georgia = (
   </g>
 );
 
+let redSunC = place(26, 0);
+let motherlodeLabel = {
+  north: place(4.5, pi*1.5, redSunC),
+  south: place(4.5, pi*.5, redSunC),
+};
+let jubilee = place(10.25, pi*1.75, redSunC);
+let ansons = place(8.65, pi*.25, redSunC);
+let greenleaf = place(6.75, pi, redSunC);
+let harvest = place(6, 0, redSunC);
+let albans = place(6.23, pi*.55, redSunC);
+let jiangyn = place(2.6, pi, redSunC);
+let newMelburne = place(2.85, 0, redSunC);
+
+let redSun = (
+  <g id="red-sun">
+    <circle fill="black" cx={ redSunC.x } cy={ redSunC.y } r={ 12 } stroke-width={ .1 } />
+    <AsteroidBelt cx={ redSunC.x } cy={ redSunC.y } particles={ 500 } spread={ 1.2 } r={ 4.5 } />
+    <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ motherlodeLabel.north.x } y={ motherlodeLabel.north.y } style={ { textTransform: 'uppercase' } } fill="silver" font-size="0.35" title="Motherlode"/>
+    <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ motherlodeLabel.south.x } y={ motherlodeLabel.south.y } style={ { textTransform: 'uppercase' } } fill="silver" font-size="0.35" title="Motherlode"/>
+    <RadialGrid cx={ redSunC.x } cy={ redSunC.y } minR={ 2 } r="5" minArc={ 90 } radialSubdivisions={ 2 } stroke="orange" stroke-width="0.1"></RadialGrid>
+    <RadialGrid cx={ redSunC.x } cy={ redSunC.y } minR={ 5 } r="8" minArc={ 45 } radialSubdivisions={ 4 } stroke="orange" stroke-width="0.1"></RadialGrid>
+    <RadialGrid cx={ redSunC.x } cy={ redSunC.y } minR={ 8 } r="12" minArc={ 22.5 } radialSubdivisions={ 8 } stroke="orange" stroke-width="0.1"></RadialGrid>
+    <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ 69 } y={ 43 } style={ { fontFamily: 'AnchorJack' } } fill="white" href="assets/planets16_high_resolution/planet22.png" subtitle="Space Bazaar" title="李申的市场" />
+    <CircularMarker cx={ c.x } cy={ c.y } x={ redSunC.x } y={ redSunC.y } size="3" style={ { textTransform: 'uppercase' } } fill="white" href="assets/main_sequence_high_resolution/star_red04.png" subtitle="南方朱雀" title="Red Sun"/>
+    <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ jiangyn.x } y={ jiangyn.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" subtitle="Jiangyn" title="江阴"/>
+    <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ newMelburne.x } y={ newMelburne.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="New Melburne"/>
+    <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ harvest.x } y={ harvest.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Harvest"/>
+    <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ ansons.x } y={ ansons.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Anson's World"/>
+    <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ albans.x } y={ albans.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="St. Albans"/>
+    <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ greenleaf.x } y={ greenleaf.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Greenleaf"/>
+    <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ jubilee.x } y={ jubilee.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Jubilee"/>
+  </g>
+);
 
 const IndexPage = () => (
   <>
@@ -228,23 +261,7 @@ const IndexPage = () => (
             <CircularMarker cx={ 27 } cy={ 63 } x={ 28.5 } y={ 63.6 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Hera"/>
             <CircularMarker cx={ 27 } cy={ 63 } x={ 26.8 } y={ 61.15 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Aphrodite"/>
           </g>
-          <g id="red-sun">
-            <circle fill="black" cx={ 76 } cy={ 50 } r={ 12 } stroke-width={ .1 }></circle>
-            <AsteroidBelt cx={ 76 } cy={ 50 } particles={ 500 } spread={ 1.2 } r={ 4.5 }></AsteroidBelt>
-            <CircularMarker cx={ 76 } cy={ 50 } x={ 73 } y={ 53 } style={ { textTransform: 'uppercase' } } fill="silver" font-size="0.35" title="Motherlode"/>
-            <RadialGrid cx={ 76 } cy={ 50 } minR={ 2 } r="5" minArc={ 90 } radialSubdivisions={ 2 } stroke="orange" stroke-width="0.1"></RadialGrid>
-            <RadialGrid cx={ 76 } cy={ 50 } minR={ 5 } r="8" minArc={ 45 } radialSubdivisions={ 4 } stroke="orange" stroke-width="0.1"></RadialGrid>
-            <RadialGrid cx={ 76 } cy={ 50 } minR={ 8 } r="12" minArc={ 22.5 } radialSubdivisions={ 8 } stroke="orange" stroke-width="0.1"></RadialGrid>
-            <CircularMarker cx={ 76 } cy={ 50 } x={ 69 } y={ 43 } style={ { fontFamily: 'AnchorJack' } } fill="white" href="assets/planets16_high_resolution/planet22.png" subtitle="Space Bazaar" title="李申的市场" />
-            <CircularMarker cx={ 50 } cy={ 50 } x={ 76 } y={ 50 } size="3" style={ { textTransform: 'uppercase' } } fill="white" href="assets/main_sequence_high_resolution/star_red04.png" subtitle="南方朱雀" title="Red Sun"/>
-            <CircularMarker cx={ 76 } cy={ 50 } x={ 73 } y={ 50 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" subtitle="Jiangyn" title="江阴"/>
-            <CircularMarker cx={ 76 } cy={ 50 } x={ 79.5 } y={ 50 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="New Melburne"/>
-            <CircularMarker cx={ 76 } cy={ 50 } x={ 82 } y={ 52 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Harvest"/>
-            <CircularMarker cx={ 76 } cy={ 50 } x={ 84 } y={ 56 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Anson's World"/>
-            <CircularMarker cx={ 76 } cy={ 50 } x={ 74 } y={ 56 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="St. Albans"/>
-            <CircularMarker cx={ 76 } cy={ 50 } x={ 70 } y={ 48 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Greenleaf"/>
-            <CircularMarker cx={ 76 } cy={ 50 } x={ 83 } y={ 43 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Jubilee"/>
-          </g>
+          { redSun }
           <g id="heinlein">
             <circle fill="black" cx={ 67.5 } cy={ 64 } r="5" stroke-width="0.1"></circle>
             <RadialGrid cx={ 67.5 } cy={ 64 } minR={ 2 } r="5" radialSubdivisions={ 2 } stroke="orange" stroke-width="0.1" minArc={ 36 }></RadialGrid>
