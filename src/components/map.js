@@ -93,8 +93,8 @@ class Map extends React.Component {
         data-zoom={ z }
        >
         { background }
-        <ause href="#grid" x="0" y="0" height="100" width="140"/>
-        <use href="#slots" x="0" y="0" height="11189mm" width="11189mm"/>
+        <use href="#grid" x="0" y="0" height="11189mm" width="11189mm"  />
+        <use href="#slots" x="0" y="0" />
       </svg>
     )
   }
