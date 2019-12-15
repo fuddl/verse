@@ -228,7 +228,7 @@ let georgia = (
     <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ regina.x } y={ regina.y } style={ { fontFamily: 'Chi-Town', textTransform: 'lowercase' } } fill="white" href="assets/planet15/planet_41.png" title="Regina"/>
     <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ athens.x } y={ athens.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_44.png" title="Athens"/>
     <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ newhope.x } y={ newhope.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Newhope"/>
-    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ ithaca.x } y={ ithaca.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_43.png" title="Ithaca"/>
+    <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ ithaca.x } y={ ithaca.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet26.png" title="Ithaca"/>
     <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ priam.x } y={ priam.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_46.png" title="Priam"/>
     <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ kerry.x } y={ kerry.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_45.png" title="Kerry"/>
     <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ threeHills.x } y={ threeHills.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_36.png" title="Three Hills"/>
@@ -306,22 +306,29 @@ let redSun = (
 
 let kalidasaC = place(42.5, pi*1.613);
 let penglaiC = place(20, pi*.225, kalidasaC);
-let beloux = place(3, pi*1.225, penglaiC);
-let newhall = place(3.4, pi*.225, penglaiC);
-let verbana = place(3.2, pi*1.45, kalidasaC);
-let shoJeDowns = place(3.6, pi*.15, kalidasaC);
+let beloux = place(3, pi*1.3, penglaiC);
+let newhall = place(3.4, pi*.5, penglaiC);
+let verbana = place(3.2, pi*1.05, kalidasaC);
+let shoJeDowns = place(3.6, pi*1.93, kalidasaC);
 let zeus = place(12.8, pi*.745, kalidasaC);
 let sailsburry = place(14.5, pi*1.245, kalidasaC);
-let aberdeen = place(10.6, pi*1.206, kalidasaC);
-let beaumonde = place(14.2, pi*1.01, kalidasaC);
+let aberdeen = place(10, pi*1.17, kalidasaC);
+let beaumonde = place(13.2, pi*1, kalidasaC);
+let djinnsBane = place(14.2, pi*.617, kalidasaC);
+let zephyr = place(10.7, pi*.35, kalidasaC);
+let newKashmir = place(9, pi*.65, kalidasaC);
+let constance = place(6, pi*.2, kalidasaC);
+let angel = place(6.5, pi*.75, kalidasaC);
+let heaven = place(6.65, pi*1.27, kalidasaC);
+let whittier = place(9.8, pi*.90, kalidasaC);
 
 let penglai = (
   <g id="penglai">
     <circle fill="black" cx={ 80 } cy={ 23 } r="5" stroke-width="0.1"></circle>
     <RadialGrid cx={ 80 } cy={ 23 } minR={ 2 } r="5" radialSubdivisions={ 2 } stroke="red" stroke-width="0.1"></RadialGrid>
     <CircularMarker ox={ kalidasaC.x } oy={ kalidasaC.y } cx={ c.x } cy={ c.y } x={ penglaiC.x } y={ penglaiC.y } style={ { textTransform: 'uppercase' } } fill="white" font-size="0.7" size="3" href="assets/main_sequence_high_resolution/star_yellow01.png" subtitle="蓬萊仙島" title="Penglai"/>
-    <CircularMarker cx={ penglaiC.x } cy={ penglaiC.y } x={ newhall.x } y={ newhall.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Newhall"/>
-    <CircularMarker cx={ penglaiC.x } cy={ penglaiC.y } x={ beloux.x } y={ beloux.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Belux"/>
+    <CircularMarker cx={ penglaiC.x } cy={ penglaiC.y } x={ newhall.x } y={ newhall.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet19.png" title="Newhall"/>
+    <CircularMarker cx={ penglaiC.x } cy={ penglaiC.y } x={ beloux.x } y={ beloux.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet30.png" title="Belux"/>
   </g>
 );
 
@@ -334,19 +341,19 @@ let kalidasa = (
     <RadialGrid cx={ kalidasaC.x } cy={ kalidasaC.y } minR={ 12 } r="16" minArc={ 100 } radialSubdivisions={ 16 } stroke="red" stroke-width="0.1"></RadialGrid>
     
     <CircularMarker cx={ c.x } cy={ c.y } x={ kalidasaC.x } y={ kalidasaC.y } style={ { textTransform: 'uppercase' } } fill="white" font-size="0.7" size="3" href="assets/main_sequence_high_resolution/star_yellow02.png" subtitle="玄武" title="Kalidasa"/>
-    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ zeus.x } y={ zeus.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Zeus"/>
-    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ 60 } y={ 23 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Djinn's Bane"/>
-    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ 67 } y={ 20 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Zephyr"/>
-    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ 60 } y={ 18 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="New Kashmir"/>
-    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ 70.8 } y={ 13 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Constance"/>
-    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ verbana.x } y={ verbana.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Verbana"/>
-    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ shoJeDowns.x } y={ shoJeDowns.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Sho-Je Downs"/>
-    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ 61 } y={ 14 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Angel"/>
-    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ 61 } y={ 5 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Heaven"/>
-    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ 55 } y={ 11 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Whittier"/>
-    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ beaumonde.x } y={ beaumonde.y } style={ { textTransform: 'uppercase', fontFamily: 'Omnibus' } } fill="white" href="assets/planet15/planet_38.png" title="Beaumonde"/>
-    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ aberdeen.x } y={ aberdeen.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Aberdeen"/>
-    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ sailsburry.x } y={ sailsburry.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Sailsburry"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ zeus.x } y={ zeus.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_36.png" title="Zeus"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ djinnsBane.x } y={ djinnsBane.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet18.png" title="Djinn's Bane"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ zephyr.x } y={ zephyr.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Zephyr"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ newKashmir.x } y={ newKashmir.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_41.png" title="New Kashmir"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ constance.x } y={ constance.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet23.png" title="Constance"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ verbana.x } y={ verbana.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet32.png" title="Verbana"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ shoJeDowns.x } y={ shoJeDowns.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet22.png" title="Sho-Je Downs"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ angel.x } y={ angel.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet30.png" title="Angel"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ heaven.x } y={ heaven.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet29.png" title="Heaven"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ whittier.x } y={ whittier.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet28.png" title="Whittier"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ beaumonde.x } y={ beaumonde.y } style={ { textTransform: 'uppercase', fontFamily: 'Omnibus' } } fill="white" href="assets/planet15/planet_43.png" title="Beaumonde"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ aberdeen.x } y={ aberdeen.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_39.png" title="Aberdeen"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ sailsburry.x } y={ sailsburry.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_37.png" title="Sailsburry"/>
     { penglai }
   </g>
 );
