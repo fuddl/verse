@@ -297,6 +297,53 @@ let redSun = (
   </g>
 );
 
+let kalidasaC = place(42.5, pi*1.613);
+let penglaiC = place(20, pi*.225, kalidasaC);
+let beloux = place(3, pi*1.225, penglaiC);
+let newhall = place(3.4, pi*.225, penglaiC);
+let verbana = place(3.2, pi*1.45, kalidasaC);
+let shoJeDowns = place(3.6, pi*.15, kalidasaC);
+let zeus = place(12.8, pi*.745, kalidasaC);
+let sailsburry = place(14.5, pi*1.245, kalidasaC);
+let aberdeen = place(10.6, pi*1.206, kalidasaC);
+let beaumonde = place(14.2, pi*1.01, kalidasaC);
+
+let penglai = (
+  <g id="penglai">
+    <circle fill="black" cx={ 80 } cy={ 23 } r="5" stroke-width="0.1"></circle>
+    <RadialGrid cx={ 80 } cy={ 23 } minR={ 2 } r="5" radialSubdivisions={ 2 } stroke="red" stroke-width="0.1"></RadialGrid>
+    <CircularMarker ox={ kalidasaC.x } oy={ kalidasaC.y } cx={ c.x } cy={ c.y } x={ penglaiC.x } y={ penglaiC.y } style={ { textTransform: 'uppercase' } } fill="white" font-size="0.7" size="3" href="assets/main_sequence_high_resolution/star_yellow01.png" subtitle="蓬萊仙島" title="Penglai"/>
+    <CircularMarker cx={ penglaiC.x } cy={ penglaiC.y } x={ newhall.x } y={ newhall.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Newhall"/>
+    <CircularMarker cx={ penglaiC.x } cy={ penglaiC.y } x={ beloux.x } y={ beloux.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Belux"/>
+  </g>
+);
+
+let kalidasa = (
+  <g id="kalidasa">
+    <circle fill="black" cx={ kalidasaC.x } cy={ kalidasaC.y } r="16" stroke-width="0.1"></circle>
+    <RadialGrid cx={ kalidasaC.x } cy={ kalidasaC.y } minR={ 2 } r="5" minArc={ 115 } radialSubdivisions={ 2 } stroke="red" stroke-width="0.1"></RadialGrid>
+    <RadialGrid cx={ kalidasaC.x } cy={ kalidasaC.y } minR={ 5 } r="8" minArc={ 70 } radialSubdivisions={ 4 } stroke="red" stroke-width="0.1"></RadialGrid>
+    <RadialGrid cx={ kalidasaC.x } cy={ kalidasaC.y } minR={ 8 } r="12" minArc={ 92.5 } radialSubdivisions={ 8 } stroke="red" stroke-width="0.1"></RadialGrid>
+    <RadialGrid cx={ kalidasaC.x } cy={ kalidasaC.y } minR={ 12 } r="16" minArc={ 100 } radialSubdivisions={ 16 } stroke="red" stroke-width="0.1"></RadialGrid>
+    
+    <CircularMarker cx={ c.x } cy={ c.y } x={ kalidasaC.x } y={ kalidasaC.y } style={ { textTransform: 'uppercase' } } fill="white" font-size="0.7" size="3" href="assets/main_sequence_high_resolution/star_yellow02.png" subtitle="玄武" title="Kalidasa"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ zeus.x } y={ zeus.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Zeus"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ 60 } y={ 23 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Djinn's Bane"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ 67 } y={ 20 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Zephyr"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ 60 } y={ 18 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="New Kashmir"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ 70.8 } y={ 13 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Constance"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ verbana.x } y={ verbana.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Verbana"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ shoJeDowns.x } y={ shoJeDowns.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Sho-Je Downs"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ 61 } y={ 14 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Angel"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ 61 } y={ 5 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Heaven"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ 55 } y={ 11 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Whittier"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ beaumonde.x } y={ beaumonde.y } style={ { textTransform: 'uppercase', fontFamily: 'Omnibus' } } fill="white" href="assets/planet15/planet_38.png" title="Beaumonde"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ aberdeen.x } y={ aberdeen.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Aberdeen"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ sailsburry.x } y={ sailsburry.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Sailsburry"/>
+    { penglai }
+  </g>
+);
+
 const IndexPage = () => (
   <>
     <link rel="stylesheet" href="map.css" />
@@ -310,34 +357,7 @@ const IndexPage = () => (
           { whiteSun }
           { georgia }
           { redSun }
-          <g id="kalidasa">
-            <circle fill="black" cx={ 65 } cy={ 10 } r="16" stroke-width="0.1"></circle>
-            <RadialGrid cx={ 65 } cy={ 10 } minR={ 2 } r="5" minArc={ 115 } radialSubdivisions={ 2 } stroke="red" stroke-width="0.1"></RadialGrid>
-            <RadialGrid cx={ 65 } cy={ 10 } minR={ 5 } r="8" minArc={ 70 } radialSubdivisions={ 4 } stroke="red" stroke-width="0.1"></RadialGrid>
-            <RadialGrid cx={ 65 } cy={ 10 } minR={ 8 } r="12" minArc={ 92.5 } radialSubdivisions={ 8 } stroke="red" stroke-width="0.1"></RadialGrid>
-            <RadialGrid cx={ 65 } cy={ 10 } minR={ 12 } r="16" minArc={ 100 } radialSubdivisions={ 16 } stroke="red" stroke-width="0.1"></RadialGrid>
-            <CircularMarker cx={ 50 } cy={ 50 } x={ 65 } y={ 10 } style={ { textTransform: 'uppercase' } } fill="white" font-size="0.7" size="3" href="assets/main_sequence_high_resolution/star_yellow02.png" subtitle="玄武" title="Kalidasa"/>
-            <CircularMarker cx={ 65 } cy={ 10 } x={ 56 } y={ 20 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Zeus"/>
-            <CircularMarker cx={ 65 } cy={ 10 } x={ 60 } y={ 23 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Djinn's Bane"/>
-            <CircularMarker cx={ 65 } cy={ 10 } x={ 67 } y={ 20 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Zephyr"/>
-            <CircularMarker cx={ 65 } cy={ 10 } x={ 60 } y={ 18 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="New Kashmir"/>
-            <CircularMarker cx={ 65 } cy={ 10 } x={ 70.8 } y={ 13 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Constance"/>
-            <CircularMarker cx={ 65 } cy={ 10 } x={ 64 } y={ 6.46 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Verbana"/>
-            <CircularMarker cx={ 65 } cy={ 10 } x={ 68 } y={ 10 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Sho-Je Downs"/>
-            <CircularMarker cx={ 65 } cy={ 10 } x={ 61 } y={ 14 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Angel"/>
-            <CircularMarker cx={ 65 } cy={ 10 } x={ 61 } y={ 5 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Heaven"/>
-            <CircularMarker cx={ 65 } cy={ 10 } x={ 55 } y={ 11 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Whittier"/>
-            <CircularMarker cx={ 65 } cy={ 10 } x={ 51 } y={ 10 } style={ { textTransform: 'uppercase', fontFamily: 'Omnibus' } } fill="white" href="assets/planet15/planet_38.png" title="Beaumonde"/>
-            <CircularMarker cx={ 65 } cy={ 10 } x={ 56 } y={ 5 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Aberdeen"/>
-            <CircularMarker cx={ 65 } cy={ 10 } x={ 54 } y={ 0.5 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Sailsburry"/>
-          </g>
-          <g id="penglai">
-            <circle fill="black" cx={ 80 } cy={ 23 } r="5" stroke-width="0.1"></circle>
-            <RadialGrid cx={ 80 } cy={ 23 } minR={ 2 } r="5" radialSubdivisions={ 2 } stroke="red" stroke-width="0.1"></RadialGrid>
-            <CircularMarker cx={ 50 } cy={ 50 } x={ 80 } y={ 23 } style={ { textTransform: 'uppercase' } } fill="white" font-size="0.7" size="3" href="assets/main_sequence_high_resolution/star_yellow01.png" subtitle="蓬萊仙島" title="Penglai"/>
-            <CircularMarker cx={ 80 } cy={ 23 } x={ 82.5 } y={ 25.5 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Newhall"/>
-            <CircularMarker cx={ 80 } cy={ 23 } x={ 77.5 } y={ 20.2 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Belux"/>
-          </g>
+          { kalidasa }
           <g id="blue-sun">
             <circle fill="black" cx={ 17 } cy={ 83 } r="12" stroke-width="0.1"></circle>
             <AsteroidBelt cx={ 17 } cy={ 83 } particles={ 500 } spread={ 1.2 } r={ 8.5 }></AsteroidBelt>
