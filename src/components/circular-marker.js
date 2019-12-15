@@ -41,12 +41,15 @@ class marker extends React.Component {
     var x = attributes['x'];
     var y = attributes['y'];
     let image = null;
-    var r = Math.sqrt(Math.pow(x - cx, 2) + Math.pow(y - cy, 2));
+     var r = Math.sqrt(Math.pow(x - cx, 2) + Math.pow(y - cy, 2));
     if (attributes.href) {
+      let ox = attributes['ox'] ? attributes['ox'] : cx;
+      let oy = attributes['oy'] ? attributes['oy'] : cy;
+      var or = Math.sqrt(Math.pow(x - ox, 2) + Math.pow(y - oy, 2));
       let size = attributes.size ? attributes.size : 1;
       image = (
         <>
-          <circle cx={ cx } cy={ cy } r={ r } fill="none" stroke="white" strokeWidth={ .1 } opacity={ .1 } />
+          <circle cx={ ox } cy={ oy } r={ or } fill="none" stroke="white" strokeWidth={ .1 } opacity={ .1 } />
           <image
             href={ attributes.href }
             x={ x-(size/2) }
