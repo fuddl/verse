@@ -351,6 +351,63 @@ let kalidasa = (
   </g>
 );
 
+function findThird(one, two, distFromTwo) {
+  let d = Math.sqrt(Math.pow(two.x - one.x, 2) + Math.pow(two.y - one.y, 2));
+  let r = distFromTwo / d;
+
+  return {
+    x: r * two.x + (1 - r) * one.x,
+    y: r * two.y + (1 - r) * one.y,
+  }
+}
+
+let blueSunC = place(47, pi*.75);
+let burnhamC = place(25.5, pi*1.32, blueSunC);
+let burnhamLabel = findThird(burnhamC,c, -8.5);
+let miranda = place(2.5, pi*.32, burnhamC);
+let dragonsEgg = place(10, pi*1.5, blueSunC);
+let newCanaan = place(3.55, pi*.75, blueSunC);
+let deadwood = place(10.4, pi*1.94, blueSunC);
+let fury = place(6.5, pi*1.56, blueSunC);
+let muir = place(6.5, pi*.44, blueSunC);
+let meridian = place(2.8, pi*1.75, blueSunC);
+
+let uroborusLabel = {
+  north: findThird(blueSunC, c, -8.5),
+  south: findThird(blueSunC, c, 8.5)
+}
+
+let burnham = (
+  <g id="reaver-space">
+    <circle fill="black" cx={ burnhamC.x } cy={ burnhamC.y } r="7.5" stroke-width="0.1"></circle>
+    <ScrapBelt cx={ burnhamC.x } cy={ burnhamC.y } particles={ 500 } spread={ 5 } r={ 6 }></ScrapBelt>
+    <RadialGrid cx={ burnhamC.x } cy={ burnhamC.y } minR={ 4 } r={ 7.5 } radialSubdivisions={ 12 } stroke="red" stroke-width="0.1"></RadialGrid>
+    <CircularMarker ox={ blueSunC.x } oy={ blueSunC.y } cx={ c.x } cy={ c.y } x={ burnhamC.x } y={ burnhamC.y } style={ { textTransform: 'uppercase' } } fill="white" size="2" href="assets/main_sequence_high_resolution/star_red03.png" title="Burnham"/>
+    <CircularMarker cx={ burnhamC.x } cy={ burnhamC.y } x={ burnhamLabel.x } y={ burnhamLabel.y } style={ { textTransform: 'uppercase', fontWeight: '100' } } fill="red" font-size="1.5" subtitle="Reaver Space" title="Burnham Quadrant"/>
+    <CircularMarker cx={ burnhamC.x } cy={ burnhamC.y } x={ miranda.x } y={ miranda.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Miranda"/>
+  </g>
+);
+
+let blueSun = (
+  <g id="blue-sun">
+    <circle fill="black" cx={ blueSunC.x } cy={ blueSunC.y } r="12" stroke-width="0.1"></circle>
+    <AsteroidBelt cx={ blueSunC.x } cy={ blueSunC.y }  particles={ 500 } spread={ 1.2 } r={ 8.5 }></AsteroidBelt>
+    <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y }  x={ uroborusLabel.north.x } y={ uroborusLabel.north.y } style={ { textTransform: 'uppercase' } } fill="silver" font-size="0.35" title="Uroborus Belt"/>
+    <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y }  x={ uroborusLabel.south.x } y={ uroborusLabel.south.y } style={ { textTransform: 'uppercase' } } fill="silver" font-size="0.35" title="Uroborus Belt"/>
+    <RadialGrid cx={ blueSunC.x } cy={ blueSunC.y } minR={ 2 } r="5" minArc={ 45 } radialSubdivisions={ 2 } stroke="red" stroke-width="0.1" />
+    <RadialGrid cx={ blueSunC.x } cy={ blueSunC.y }  minR={ 5 } r="8" radialSubdivisions={ 4 } stroke="red" stroke-width="0.1" />
+    <RadialGrid cx={ blueSunC.x } cy={ blueSunC.y }  minR={ 8 } r="12" minArc={ 22.5 } radialSubdivisions={ 8 } stroke="red" stroke-width="0.1" />
+    <CircularMarker cx={ c.x } cy={ c.y } x={ blueSunC.x } y={ blueSunC.y } size="3" style={ { textTransform: 'uppercase' } } fill="white" href="assets/main_sequence_high_resolution/star_blue03.png" subtitle="青龍" font-size="0.7" title="Blue Sun"/>
+    <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ meridian.x } y={ meridian.y } style={ { textTransform: 'uppercase', fontFamily: 'Omnibus' } } fill="white" href="assets/planet15/planet_38.png" title="Meridian"/>
+    <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ newCanaan.x } y={ newCanaan.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="New Canaan"/>
+    <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ muir.x } y={ muir.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Muir"/>
+    <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ fury.x } y={ fury.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Fury"/>
+    <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ deadwood.x } y={ deadwood.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Deadwood"/>
+    <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ dragonsEgg.x } y={ dragonsEgg.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/hd-hq-2d-planets-hi-res/Lava1.png" title="Dragons Egg"/>
+    { burnham }
+  </g>
+);
+
 const IndexPage = () => (
   <>
     <link rel="stylesheet" href="map.css" />
@@ -365,30 +422,7 @@ const IndexPage = () => (
           { georgia }
           { redSun }
           { kalidasa }
-          <g id="blue-sun">
-            <circle fill="black" cx={ 17 } cy={ 83 } r="12" stroke-width="0.1"></circle>
-            <AsteroidBelt cx={ 17 } cy={ 83 } particles={ 500 } spread={ 1.2 } r={ 8.5 }></AsteroidBelt>
-            <CircularMarker cx={ 17 } cy={ 83 } x={ 11 } y={ 89 } style={ { textTransform: 'uppercase' } } fill="silver" font-size="0.35" title="Uroborus Belt"/>
-            <CircularMarker cx={ 17 } cy={ 83 } x={ 23 } y={ 77 } style={ { textTransform: 'uppercase' } } fill="silver" font-size="0.35" title="Uroborus Belt"/>
-            <RadialGrid cx={ 17 } cy={ 83 } minR={ 2 } r="5" minArc={ 45 } radialSubdivisions={ 2 } stroke="red" stroke-width="0.1"></RadialGrid>
-            <RadialGrid cx={ 17 } cy={ 83 } minR={ 5 } r="8" radialSubdivisions={ 4 } stroke="red" stroke-width="0.1"></RadialGrid>
-            <RadialGrid cx={ 17 } cy={ 83 } minR={ 8 } r="12" minArc={ 22.5 } radialSubdivisions={ 8 } stroke="red" stroke-width="0.1"></RadialGrid>
-            <CircularMarker cx={ 50 } cy={ 50 } x={ 17 } y={ 83 } size="3" style={ { textTransform: 'uppercase' } } fill="white" href="assets/main_sequence_high_resolution/star_blue03.png" subtitle="青龍" font-size="0.7" title="Blue Sun"/>
-            <CircularMarker cx={ 17 } cy={ 83 } x={ 19.5 } y={ 81 } style={ { textTransform: 'uppercase', fontFamily: 'Omnibus' } } fill="white" href="assets/planet15/planet_38.png" title="Meridian"/>
-            <CircularMarker cx={ 17 } cy={ 83 } x={ 15 } y={ 85.5 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="New Canaan"/>
-            <CircularMarker cx={ 17 } cy={ 83 } x={ 18.5 } y={ 89 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Muir"/>
-            <CircularMarker cx={ 17 } cy={ 83 } x={ 20 } y={ 77 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Fury"/>
-            <CircularMarker cx={ 17 } cy={ 83 } x={ 27 } y={ 82 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Deadwood"/>
-            <CircularMarker cx={ 17 } cy={ 83 } x={ 15.5 } y={ 74 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/hd-hq-2d-planets-hi-res/Lava1.png" title="Dragons Egg"/>
-          </g>
-          <g id="reaver-space">
-            <circle fill="black" cx={ 3 } cy={ 62 } r="7.5" stroke-width="0.1"></circle>
-            <ScrapBelt cx={ 3 } cy={ 62 } particles={ 500 } spread={ 4 } r={ 5 }></ScrapBelt>
-            <RadialGrid cx={ 3 } cy={ 62 } minR={ 3 } r={ 7.5 } radialSubdivisions={ 12 } stroke="red" stroke-width="0.1"></RadialGrid>
-            <CircularMarker cx={ 50 } cy={ 50 } x={ 3 } y={ 62 } style={ { textTransform: 'uppercase' } } fill="white" size="2" href="assets/main_sequence_high_resolution/star_red03.png" title="Burnham"/>
-            <CircularMarker cx={ 3 } cy={ 62 } x={ -4.6 } y={ 65 } style={ { textTransform: 'uppercase', fontWeight: '100' } } fill="red" font-size="1.5" subtitle="Reaver Space" title="Burnham Quadrant"/>
-            <CircularMarker cx={ 3 } cy={ 62 } x={ 4 } y={ 63 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Miranda"/>
-          </g>
+          { blueSun }
         </symbol>
         <symbol id="slots">
           <rect height="1500" width="1500" stroke="white" fill="none" />
