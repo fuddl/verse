@@ -83,11 +83,13 @@ let qinShiHuang = (
 
 let relay7 = place(36, 2.75);
 let rimLabel = place(43, pi/2);
+let oortLabel = place(53.5, pi*.25);
 
 let rim = (
   <g id="rim">
     <AsteroidBelt cx={ 50 } cy={ 50 } particles={ 2000 } spread={ 10 } r={ 54 } />
     <RadialGrid cx={ 50 } cy={ 50 } minR={ 48 } r={ 60 } radialSubdivisions={ 32 }  minArc={ 5.625 } stroke="DarkSlateGrey" stroke-width=".1" concentricSubdivisions={ 1 } />
+    <CircularMarker cx={ c.x } cy={ c.y } x={ oortLabel.x } y={ oortLabel.y } style={ { textTransform: 'uppercase', fontWeight: '100' } } fill="DarkSlateGrey" font-size="2" subtitle="歐特雲" title="Oort cloud"/>
     <RadialGrid
       cx={ c.x } 
       cy={ c.y } 
@@ -107,7 +109,7 @@ let rim = (
       style={ { textTransform: "uppercase" } }
       fill="white"
       title="Cortex Relay 7"
-      href="assets/planets16_high_resolution/planet22.png" title="Cortex Relay 7"/>
+      href="assets/main_sequence_high_resolution/star_white01.png" title="Cortex Relay 7"/>
     <CircularMarker
       cx={ c.x }
       cy={ c.y }
@@ -138,11 +140,16 @@ let halo = (
   </g>        
 )
 
+let borderLabel = {
+  north: place(27, pi*1.35),
+  south: place(27, pi*.52),
+}
+
 let border = (
   <g id="border-space">
     <RadialGrid cx={ c.x } cy={ c.y } minR={ 16 } r={ 32 } radialSubdivisions={ 32 } stroke="orange" stroke-width="0.1" concentricSubdivisions={ 1 }></RadialGrid>
-    <CircularMarker cx={ c.x } cy={ c.y } x={ 50 } y={ 24 } style={ { fontWeight: 100, textTransform: 'uppercase' } } fill="orange" font-size="2" subtitle="边境空间" title="Border Space"/>
-    <CircularMarker cx={ c.x } cy={ c.y } x={ 44.7 } y={ 73.1 } style={ { textTransform: 'uppercase', fontWeight: '100' } } fill="orange" font-size="2" subtitle="边境空间" title="Border Space"/>
+    <CircularMarker cx={ c.x } cy={ c.y } x={ borderLabel.north.x } y={ borderLabel.north.y } style={ { fontWeight: 100, textTransform: 'uppercase' } } fill="orange" font-size="2" subtitle="边境空间" title="Border Space"/>
+    <CircularMarker cx={ c.x } cy={ c.y } x={ borderLabel.south.x } y={ borderLabel.south.y } style={ { textTransform: 'uppercase', fontWeight: '100' } } fill="orange" font-size="2" subtitle="边境空间" title="Border Space"/>
   </g>
 );
 
@@ -206,9 +213,9 @@ let murphy = (
     <circle fill="black" cx={ murphyC.x } cy={ murphyC.y } r="4.5" stroke-width="0.1"></circle>
     <RadialGrid cx={ murphyC.x } cy={ murphyC.y } r="4.5" minArc={ 86.5 } radialSubdivisions={ 3 } stroke="orange" stroke-width="0.1"></RadialGrid>
     <CircularMarker ox={ georgiaC.x } oy={ georgiaC.y } cx={ c.x } cy={ c.y } x={ murphyC.x } y={ murphyC.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/main_sequence_high_resolution/star_red03.png" size="3" title="Murphy"/>
-    <CircularMarker cx={ murphyC.x } cy={ murphyC.y } x={ shadow.x } y={ shadow.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Shadow"/>
-    <CircularMarker cx={ murphyC.x } cy={ murphyC.y } x={ hera.x } y={ hera.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Hera"/>
-    <CircularMarker cx={ murphyC.x } cy={ murphyC.y } x={ aphrodite.x } y={ aphrodite.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Aphrodite"/>
+    <CircularMarker cx={ murphyC.x } cy={ murphyC.y } x={ shadow.x } y={ shadow.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/shisma/Fictional_Planet_Vulcan.png" title="Shadow"/>
+    <CircularMarker cx={ murphyC.x } cy={ murphyC.y } x={ hera.x } y={ hera.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/shisma/Fictional_Planet_Qo'noS.png" title="Hera"/>
+    <CircularMarker cx={ murphyC.x } cy={ murphyC.y } x={ aphrodite.x } y={ aphrodite.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/shisma/Fictional_Planet_Andoria.png" title="Aphrodite"/>
   </g>
 );
 
@@ -395,7 +402,7 @@ let blueSun = (
     <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ newCanaan.x } y={ newCanaan.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="New Canaan"/>
     <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ muir.x } y={ muir.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Muir"/>
     <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ fury.x } y={ fury.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Fury"/>
-    <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ deadwood.x } y={ deadwood.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Deadwood"/>
+    <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ deadwood.x } y={ deadwood.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/hd-hq-2d-planets-hi-res/Ice1.png" title="Deadwood"/>
     <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ dragonsEgg.x } y={ dragonsEgg.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/hd-hq-2d-planets-hi-res/Lava1.png" title="Dragons Egg"/>
     { burnham }
   </g>
