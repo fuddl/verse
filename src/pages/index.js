@@ -174,12 +174,12 @@ let whiteSun = (
     
     <CircularMarker cx={ c.x } cy={ c.y } x={ osiris.x } y={ osiris.y } font-size="1" style={ { fontFamily: 'Sexsmith', textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet22.png" rotate={ 5 } subtitle="Shipworks" title="Osiris"/>
     <CircularMarker cx={ c.x } cy={ c.y } x={ londinium.x } y={ londinium.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet22.png" rotate={ 5 } title="Londinium"/>
-    <CircularMarker cx={ c.x } cy={ c.y } x={ liannJuin.x } y={ liannJuin.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet22.png" title="Liann Juin"/>
+    <CircularMarker cx={ c.x } cy={ c.y } x={ liannJuin.x } y={ liannJuin.y } style={ { textTransform: 'uppercase' } } fill="white" rotate={ 5 } href="assets/planets16_high_resolution/planet22.png" title="Liann Juin"/>
     <CircularMarker cx={ c.x } cy={ c.y } x={ bernadette.x } y={ bernadette.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_39.png" rotate={ 2 } title="Bernadette"/>
     <CircularMarker cx={ c.x } cy={ c.y } x={ shinon.x } y={ shinon.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_39.png" rotate={ 2 } title="Shinon"/>
-    <CircularMarker cx={ c.x } cy={ c.y } x={ bellerophon.x } y={ bellerophon.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_39.png" title="Bellerophon"/>
-    <CircularMarker cx={ c.x } cy={ c.y } x={ ariel.x } y={ ariel.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/hd-hq-2d-planets-hi-res/City1.png" title="Ariel"/>
-    <CircularMarker cx={ c.x } cy={ c.y } x={ valentine.x } y={ valentine.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_39.png" title="Valentine"/>
+    <CircularMarker cx={ c.x } cy={ c.y } x={ bellerophon.x } y={ bellerophon.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/some-planet-sprites-from-a-failed-project/rock0_1.png" rotate={ 1.56 } title="Bellerophon"/>
+    <CircularMarker cx={ c.x } cy={ c.y } x={ ariel.x } y={ ariel.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/Colorful_planets/spr_planet02.png" rotate={ 5.4 } title="Ariel"/>
+    <CircularMarker cx={ c.x } cy={ c.y } x={ valentine.x } y={ valentine.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/Colorful_planets/spr_planet01.png" rotate={ 5.5 } title="Valentine"/>
     <CircularMarker cx={ 65 } cy={ 10 } x={ c.x } y={ c.y } style={ { textTransform: 'uppercase' } } fill="white" size="3" href="assets/main_sequence_high_resolution/star_white02.png" subtitle="西方白虎" title="White Sun"/>
     <g id="lux">
       <circle fill="black" cx={ lux.x } cy={ lux.y } r="4"></circle>
@@ -345,11 +345,11 @@ let kalidasa = (
     <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ djinnsBane.x } y={ djinnsBane.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet18.png" title="Djinn's Bane"/>
     <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ zephyr.x } y={ zephyr.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Zephyr"/>
     <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ newKashmir.x } y={ newKashmir.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_41.png" title="New Kashmir"/>
-    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ constance.x } y={ constance.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet23.png" title="Constance"/>
-    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ verbana.x } y={ verbana.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet32.png" title="Verbana"/>
-    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ shoJeDowns.x } y={ shoJeDowns.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet22.png" title="Sho-Je Downs"/>
-    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ angel.x } y={ angel.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet30.png" title="Angel"/>
-    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ heaven.x } y={ heaven.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet29.png" title="Heaven"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ constance.x } y={ constance.y } rotate={ 1 } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet23.png" title="Constance"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ verbana.x } y={ verbana.y } style={ { textTransform: 'uppercase' } } rotate={ 3.5 } fill="white" href="assets/planets16_high_resolution/planet32.png" title="Verbana"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ shoJeDowns.x } y={ shoJeDowns.y } style={ { textTransform: 'uppercase' } } rotate={ 5 } fill="white" href="assets/planets16_high_resolution/planet22.png" title="Sho-Je Downs"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ angel.x } y={ angel.y } style={ { textTransform: 'uppercase' } } rotate={ 1.5 } fill="white" href="assets/planets16_high_resolution/planet30.png" title="Angel"/>
+    <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ heaven.x } y={ heaven.y } style={ { textTransform: 'uppercase' } } rotate={ 5.6 } fill="white" href="assets/planets16_high_resolution/planet29.png" title="Heaven"/>
     <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ whittier.x } y={ whittier.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet28.png" title="Whittier"/>
     <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ beaumonde.x } y={ beaumonde.y } style={ { textTransform: 'uppercase', fontFamily: 'Omnibus' } } fill="white" href="assets/planet15/planet_43.png" title="Beaumonde"/>
     <CircularMarker cx={ kalidasaC.x } cy={ kalidasaC.y } x={ aberdeen.x } y={ aberdeen.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_39.png" title="Aberdeen"/>
