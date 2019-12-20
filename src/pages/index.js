@@ -172,11 +172,11 @@ let whiteSun = (
     <RadialGrid cx={ c.x } cy={ c.y } minArc={ 22.5 } minR={ 8 } r="12" radialSubdivisions={ 8 } stroke="SteelBlue" stroke-width="0.1"></RadialGrid>
     <RadialGrid cx={ c.x } cy={ c.y } minArc={ 11.25 } minR={ 12 } r="16" radialSubdivisions={ 16 } stroke="SteelBlue" stroke-width="0.1"></RadialGrid>
     
-    <CircularMarker cx={ c.x } cy={ c.y } x={ osiris.x } y={ osiris.y } font-size="1" style={ { fontFamily: 'Sexsmith', textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet22.png" subtitle="Shipworks" title="Osiris"/>
-    <CircularMarker cx={ c.x } cy={ c.y } x={ londinium.x } y={ londinium.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet22.png" title="Londinium"/>
+    <CircularMarker cx={ c.x } cy={ c.y } x={ osiris.x } y={ osiris.y } font-size="1" style={ { fontFamily: 'Sexsmith', textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet22.png" rotate={ 5 } subtitle="Shipworks" title="Osiris"/>
+    <CircularMarker cx={ c.x } cy={ c.y } x={ londinium.x } y={ londinium.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet22.png" rotate={ 5 } title="Londinium"/>
     <CircularMarker cx={ c.x } cy={ c.y } x={ liannJuin.x } y={ liannJuin.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet22.png" title="Liann Juin"/>
-    <CircularMarker cx={ c.x } cy={ c.y } x={ bernadette.x } y={ bernadette.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_39.png" title="Bernadette"/>
-    <CircularMarker cx={ c.x } cy={ c.y } x={ shinon.x } y={ shinon.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_39.png" title="Shinon"/>
+    <CircularMarker cx={ c.x } cy={ c.y } x={ bernadette.x } y={ bernadette.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_39.png" rotate={ 2 } title="Bernadette"/>
+    <CircularMarker cx={ c.x } cy={ c.y } x={ shinon.x } y={ shinon.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_39.png" rotate={ 2 } title="Shinon"/>
     <CircularMarker cx={ c.x } cy={ c.y } x={ bellerophon.x } y={ bellerophon.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_39.png" title="Bellerophon"/>
     <CircularMarker cx={ c.x } cy={ c.y } x={ ariel.x } y={ ariel.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/hd-hq-2d-planets-hi-res/City1.png" title="Ariel"/>
     <CircularMarker cx={ c.x } cy={ c.y } x={ valentine.x } y={ valentine.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_39.png" title="Valentine"/>

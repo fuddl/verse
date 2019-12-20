@@ -33,6 +33,10 @@ class marker extends React.Component {
    );
   }
 
+  getAngle(cx, cy, px, py, rotate) {
+    return (Math.atan2(cy-py, cx-px)*180 / Math.PI) - rotate*(180/Math.PI);
+  }
+
   render() {
     let attributes = this.copyAttributes(this.props);
 
@@ -47,6 +51,7 @@ class marker extends React.Component {
       let oy = attributes['oy'] ? attributes['oy'] : cy;
       var or = Math.sqrt(Math.pow(x - ox, 2) + Math.pow(y - oy, 2));
       let size = attributes.size ? attributes.size : 1;
+      let rotate = attributes.rotate ? attributes.rotate : 0; 
       image = (
         <>
           <circle cx={ ox } cy={ oy } r={ or } fill="none" stroke="white" strokeWidth={ .1 } opacity={ .1 } />
@@ -55,7 +60,8 @@ class marker extends React.Component {
             x={ x-(size/2) }
             y={ y-(size/2) } 
             height={ size }
-            width={ size}
+            width={ size }
+            transform={ "rotate(" + [this.getAngle(ox, oy, x, y, rotate), x, y].join(' ') + ")" }
           />
         </>
       );
