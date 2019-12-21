@@ -54,7 +54,7 @@ class marker extends React.Component {
       let rotate = attributes.rotate ? attributes.rotate : 0; 
       image = (
         <>
-          <circle cx={ ox } cy={ oy } r={ or } fill="none" stroke="white" strokeWidth={ .1 } opacity={ .1 } />
+          <circle cx={ ox } cy={ oy } r={ or } fill="none" stroke="white" strokeWidth={ 1 } opacity={ .1 } vectorEffect="non-scaling-stroke" />
           <image
             href={ attributes.href }
             x={ x-(size/2) }

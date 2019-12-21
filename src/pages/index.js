@@ -210,7 +210,7 @@ let whiteSun = (
       <RadialGrid cx={ lux.x } cy={ lux.y } r="4" stroke="SteelBlue" stroke-width="0.1" radialSubdivisions={ 2 }></RadialGrid>
       <CircularMarker cx={ lux.x } cy={ lux.y } x={ persephone.x } y={ persephone.y } style={ { fontFamily: 'TallDeco', textTransform: 'uppercase' } } fill="white" href="assets/hd-hq-2d-planets-hi-res/Terran1.png" title="Persephone"/>
       <CircularMarker cx={ lux.x } cy={ lux.y } x={ pelorum.x } y={ pelorum.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Pelorum"/>
-      <CircularMarker cx={ lux.x } cy={ lux.y } x={ 50 } y={ 36 } style={ { textTransform: 'uppercase' } } fill="white" size="2.5" href="assets/main_sequence_high_resolution/star_yellow04.png" title="Lux"/>
+      <CircularMarker cx={ c.x } cy={ c.y } x={ lux.x } y={ lux.y } style={ { textTransform: 'uppercase' } } fill="white" size="2.5" href="assets/main_sequence_high_resolution/star_yellow04.png" title="Lux"/>
     </g>
     { qinShiHuang }
   </g>
@@ -234,7 +234,6 @@ let aphrodite = place(3, pi*1.44, murphyC);
 
 let murphy = (
   <g id="murphy">
-    <circle fill="black" cx={ murphyC.x } cy={ murphyC.y } r="4.5" stroke-width="0.1"></circle>
     <RadialGrid cx={ murphyC.x } cy={ murphyC.y } r="4.5" minArc={ 86.5 } radialSubdivisions={ 3 } stroke="orange" stroke-width="0.1"></RadialGrid>
     <CircularMarker ox={ georgiaC.x } oy={ georgiaC.y } cx={ c.x } cy={ c.y } x={ murphyC.x } y={ murphyC.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/main_sequence_high_resolution/star_red03.png" size="3" title="Murphy"/>
     <CircularMarker cx={ murphyC.x } cy={ murphyC.y } x={ shadow.x } y={ shadow.y } style={ { textTransform: 'uppercase' } } rotate={ 4 } fill="white" href="assets/shisma/Fictional_Planet_Vulcan.png" title="Shadow"/>
@@ -245,9 +244,11 @@ let murphy = (
 
 let georgia = (
   <g id="georgia">
-    <RadialGrid cx={ georgiaC.x } cy={ georgiaC.y } minR={ 2 } r="5" minArc={ 90 } radialSubdivisions={ 2 } stroke="orange" stroke-width="0.1"></RadialGrid>
-    <RadialGrid cx={ georgiaC.x } cy={ georgiaC.y } minR={ 5 } r="8" minArc={ 45 } radialSubdivisions={ 4 } stroke="orange" stroke-width="0.1"></RadialGrid>
-    <RadialGrid cx={ georgiaC.x } cy={ georgiaC.y } minR={ 8 } r="12" minArc={ 22.5 } radialSubdivisions={ 8 } stroke="orange" stroke-width="0.1"></RadialGrid>
+    <g clipPath="url(#top-clip)">
+      <RadialGrid cx={ georgiaC.x } cy={ georgiaC.y } minR={ 2 } r="5" minArc={ 90 } radialSubdivisions={ 2 } stroke="orange" stroke-width="0.1"></RadialGrid>
+      <RadialGrid cx={ georgiaC.x } cy={ georgiaC.y } minR={ 5 } r="8" minArc={ 45 } radialSubdivisions={ 4 } stroke="orange" stroke-width="0.1"></RadialGrid>
+      <RadialGrid cx={ georgiaC.x } cy={ georgiaC.y } minR={ 8 } r="12" minArc={ 22.5 } radialSubdivisions={ 8 } stroke="orange" stroke-width="0.1"></RadialGrid>
+    </g>
     <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ regina.x } y={ regina.y } style={ { fontFamily: 'Chi-Town', textTransform: 'lowercase' } } rotate={ 5 } fill="white" href="assets/planet15/planet_41.png" title="Regina"/>
     <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ athens.x } y={ athens.y } style={ { textTransform: 'uppercase' } } rotate={ 1.2 } fill="white" href="assets/planet15/planet_44.png" title="Athens"/>
     <CircularMarker cx={ georgiaC.x } cy={ georgiaC.y } x={ newhope.x } y={ newhope.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Newhope"/>
@@ -312,7 +313,7 @@ let redSun = (
       <RadialGrid cx={ redSunC.x } cy={ redSunC.y } minR={ 5 } r="8" minArc={ 45 } radialSubdivisions={ 4 } stroke="orange" stroke-width="0.1"></RadialGrid>
       <RadialGrid cx={ redSunC.x } cy={ redSunC.y } minR={ 8 } r="12" minArc={ 22.5 } radialSubdivisions={ 8 } stroke="orange" stroke-width="0.1"></RadialGrid>
     </g>
-    <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ 69 } y={ 43 } style={ { fontFamily: 'AnchorJack' } } fill="white" href="assets/planets16_high_resolution/planet22.png" subtitle="Space Bazaar" title="李申的市场" />
+    <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ 69 } y={ 43 } style={ { fontFamily: 'AnchorJack' } } fill="white" href="assets/Eridani-7-OBJ-552992838/space-bazaar.png" rotate={ pi + pi / 2 } subtitle="Space Bazaar" title="李申的市场" />
     <CircularMarker cx={ c.x } cy={ c.y } x={ redSunC.x } y={ redSunC.y } size="3" style={ { textTransform: 'uppercase' } } fill="white" href="assets/main_sequence_high_resolution/star_red04.png" subtitle="南方朱雀" title="Red Sun"/>
     <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ jiangyn.x } y={ jiangyn.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" subtitle="Jiangyn" title="江阴"/>
     <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ newMelburne.x } y={ newMelburne.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="New Melburne"/>
@@ -441,7 +442,7 @@ const IndexPage = () => (
     <svg heigh="0" width="0">
       <defs>
         <clipPath id="top-clip" viewBox="0 -11 100 121">
-          <path clip-rule="evenodd" d={ circlePath(c.x, c.y, 60) + circlePath(lux.x, lux.y, 4) + circlePath(qin.x, qin.y, 3.25) + circlePath(himinbjoergC.x, himinbjoergC.y, 5) + circlePath(burnhamC.x, burnhamC.y, 7.5) + circlePath(heinleinC.x, heinleinC.y , 5) + circlePath(penglaiC.x, penglaiC.y, 5) } />
+          <path clip-rule="evenodd" d={ circlePath(c.x, c.y, 60) + circlePath(lux.x, lux.y, 4) + circlePath(qin.x, qin.y, 3.25) + circlePath(himinbjoergC.x, himinbjoergC.y, 5) + circlePath(burnhamC.x, burnhamC.y, 7.5) + circlePath(heinleinC.x, heinleinC.y , 5) + circlePath(penglaiC.x, penglaiC.y, 5) + circlePath( murphyC.x, murphyC.y, 4.5) } />
         </clipPath>
         <clipPath id="bottom-clip" viewBox="0 -11 100 121">
           <path clip-rule="evenodd" d={ circlePath(c.x, c.y, 60) + circlePath(redSunC.x, redSunC.y, 12) + circlePath(georgiaC.x, georgiaC.y, 12) + circlePath(blueSunC.x, blueSunC.y, 12)  + circlePath(kalidasaC.x, kalidasaC.y, 16) } />
