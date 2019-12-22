@@ -96,8 +96,8 @@ let qinShiHuang = (
   </g>
 );
 
-let relay7 = place(36, 2.75);
-let relay2 = place(36, pi*1.82);
+let relay7 = place(35.5, 2.75);
+let relay2 = place(34.5, pi*1.813);
 let rimLabel = place(43, pi/2);
 let oortLabel = place(53.5, pi*.25);
 
@@ -379,13 +379,14 @@ let heinlein = (
   </g>
 );
 
-let himinbjoergC = place(18.5, pi*1.43, redSunC);
+let himinbjoergC = place(17.7, pi*1.415, redSunC);
+let himinbjoergR = 6;
 let aesir = place(3.5, pi*1.434, himinbjoergC);
 let brisengamen = place(3.75, pi*.434, himinbjoergC);
 
 let himinbjoerg = (
   <g id="himinbjoerg">
-    <RadialGrid cx={ himinbjoergC.x } cy={ himinbjoergC.y } minR={ 2 } r="5" radialSubdivisions={ 2 } stroke="orange" stroke-width="0.1"></RadialGrid>
+    <RadialGrid cx={ himinbjoergC.x } cy={ himinbjoergC.y } minR={ 2 } r={ himinbjoergR } radialSubdivisions={ 2 } minArc={ 76 } stroke="orange" stroke-width="0.1"></RadialGrid>
     <CircularMarker ox={ redSunC.x } oy={ redSunC.y } cx={ c.x } cy={ c.y } x={ himinbjoergC.x } y={ himinbjoergC.y } style={ { textTransform: 'uppercase' } } fill="white" font-size="0.7" size="2" href="assets/main_sequence_high_resolution/star_red01.png" title="Himinbjörg"/>
     <CircularMarker cx={ himinbjoergC.x } cy={ himinbjoergC.y } x={ aesir.x } y={ aesir.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Aesir"/>
     <CircularMarker cx={ himinbjoergC.x } cy={ himinbjoergC.y } x={ brisengamen.x } y={ brisengamen.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Brisengamen"/>
@@ -541,7 +542,7 @@ const IndexPage = () => (
           <line x1="0" y="0" x2="0" y2=".7" stroke="red" stroke-width=".6" opacity=".25" />
         </pattern>
         <clipPath id="top-clip" viewBox="0 -11 100 121">
-          <path clip-rule="evenodd" d={ circlePath(c.x, c.y, 60) + circlePath(lux.x, lux.y, 4) + circlePath(qin.x, qin.y, 3.25) + circlePath(himinbjoergC.x, himinbjoergC.y, 5) + circlePath(burnhamC.x, burnhamC.y, 7.5) + circlePath(heinleinC.x, heinleinC.y , 5) + circlePath(penglaiC.x, penglaiC.y, 5) + circlePath( murphyC.x, murphyC.y, 4.5) } />
+          <path clip-rule="evenodd" d={ circlePath(c.x, c.y, 60) + circlePath(lux.x, lux.y, 4) + circlePath(qin.x, qin.y, 3.25) + circlePath(himinbjoergC.x, himinbjoergC.y, himinbjoergR) + circlePath(burnhamC.x, burnhamC.y, 7.5) + circlePath(heinleinC.x, heinleinC.y , 5) + circlePath(penglaiC.x, penglaiC.y, 5) + circlePath( murphyC.x, murphyC.y, 4.5) } />
         </clipPath>
         <clipPath id="bottom-clip" viewBox="0 -11 100 121">
           <path clip-rule="evenodd" d={ circlePath(c.x, c.y, 60) + circlePath(redSunC.x, redSunC.y, 12) + circlePath(georgiaC.x, georgiaC.y, 12) + circlePath(blueSunC.x, blueSunC.y, 12)  + circlePath(kalidasaC.x, kalidasaC.y, 16) } />
