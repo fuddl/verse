@@ -97,6 +97,7 @@ let qinShiHuang = (
 );
 
 let relay7 = place(36, 2.75);
+let relay2 = place(36, pi*1.82);
 let rimLabel = place(43, pi/2);
 let oortLabel = place(53.5, pi*.25);
 
@@ -119,6 +120,56 @@ let rim = (
         stroke-width={ .1 }
         concentricSubdivisions={ 1 }
       />
+      <g opacity={ .5 }>
+        <RadialGrid
+          cx={ c.x } 
+          cy={ c.y } 
+          minR={ 40 }
+          r={ 48 }
+          minArc={ (360 / 32 * -3) + 5.625 }
+          maxArc={ (360 / 32 * 11) + 5.625 }
+          radialSubdivisions={ 28 }
+          stroke="red"
+          stroke-width={ .05 }
+          concentricSubdivisions={ 1 }
+        />
+        <RadialGrid
+          cx={ c.x } 
+          cy={ c.y } 
+          minR={ 32 }
+          r={ 40 }
+          minArc={ (360 / 32 * -2) + 5.625 }
+          maxArc={ (360 / 32 * 10) + 5.625 }
+          radialSubdivisions={ 24 }
+          stroke="red"
+          stroke-width={ .05 }
+          concentricSubdivisions={ 1 }
+        />
+        <RadialGrid
+          cx={ c.x } 
+          cy={ c.y } 
+          minR={ 40 }
+          r={ 48 }
+          minArc={ (360 / 32 * 15) + 5.625 }
+          maxArc={ (360 / 32 * 23) + 5.625 }
+          radialSubdivisions={ 16 }
+          stroke="red"
+          stroke-width={ .05 }
+          concentricSubdivisions={ 1 }
+        />
+        <RadialGrid
+          cx={ c.x } 
+          cy={ c.y } 
+          minR={ 32 }
+          r={ 40 }
+          minArc={ (360 / 32 * 16) + 5.625 }
+          maxArc={ (360 / 32 * 23) + 5.625 }
+          radialSubdivisions={ 14 }
+          stroke="red"
+          stroke-width={ .05 }
+          concentricSubdivisions={ 1 }
+        />
+      </g>
     </g>
     <CircularMarker
       cx={ c.x }
@@ -128,7 +179,18 @@ let rim = (
       style={ { textTransform: "uppercase" } }
       fill="white"
       title="Cortex Relay 7"
-      href="assets/main_sequence_high_resolution/star_white01.png" title="Cortex Relay 7"/>
+      href="assets/main_sequence_high_resolution/star_white01.png" title="Cortex" subtitle="Relay 7"
+    />
+    <CircularMarker
+      cx={ c.x }
+      cy={ c.y }
+      x={ relay2.x }
+      y={ relay2.y }
+      style={ { textTransform: "uppercase" } }
+      fill="white"
+      title="Cortex Relay 7"
+      href="assets/main_sequence_high_resolution/star_white01.png" title="Cortex" subtitle="Relay 2"
+    />
     <CircularMarker
       cx={ c.x }
       cy={ c.y }
@@ -168,6 +230,33 @@ let border = (
   <g id="border-space" clipPath="url(#bottom-clip)">
     <g clipPath="url(#top-clip)">
       <RadialGrid cx={ c.x } cy={ c.y } minR={ 16 } r={ 32 } radialSubdivisions={ 32 } stroke="orange" stroke-width="0.1" concentricSubdivisions={ 1 }></RadialGrid>
+      <g opacity={ .5 }>
+        <RadialGrid
+          cx={ c.x } 
+          cy={ c.y } 
+          minR={ 24 }
+          r={ 32 }
+          minArc={ 360 / 32 * 2 }
+          maxArc={ 360 / 32 * 8 }
+          radialSubdivisions={ 12 }
+          stroke="orange"
+          stroke-width={ .05 }
+          concentricSubdivisions={ 1 }
+        />
+        <RadialGrid
+          cx={ c.x } 
+          cy={ c.y } 
+          minR={ 24 }
+          r={ 32 }
+          minArc={ 360 / 32 * 17 }
+          maxArc={ 360 / 32 * 23 }
+          radialSubdivisions={ 12 }
+          stroke="orange"
+          stroke-width={ .05 }
+          concentricSubdivisions={ 1 }
+        />
+      </g>
+
       <CircularMarker cx={ c.x } cy={ c.y } x={ borderLabel.north.x } y={ borderLabel.north.y } style={ { fontWeight: 100, textTransform: 'uppercase' } } fill="orange" font-size="2" subtitle="边境空间" title="Border Space"/>
       <CircularMarker cx={ c.x } cy={ c.y } x={ borderLabel.south.x } y={ borderLabel.south.y } style={ { textTransform: 'uppercase', fontWeight: '100' } } fill="orange" font-size="2" subtitle="边境空间" title="Border Space"/>
     </g>
@@ -180,8 +269,8 @@ let shinon = place(6.2, pi*1.95)
 let bernadette = place(3.2, pi*1.45);
 let liannJuin = place(6, pi*.55);
 let bellerophon = place(10, pi*1.25);
-let ariel = place(14.5, pi*.25);
-let valentine = place(13.4, pi*1.12);
+let ariel = place(14.5, pi*1.12);
+let valentine = place(13.4, pi*.25);
 let lux = place(14, pi*1.5);
 let persephone = place(2.7, pi*1.5, lux);
 let pelorum = place(2.1, pi*.25, lux);
@@ -197,12 +286,12 @@ let whiteSun = (
       </g>
     </g>
 
-    <CircularMarker cx={ c.x } cy={ c.y } x={ osiris.x } y={ osiris.y } font-size="1" style={ { fontFamily: 'Sexsmith', textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet22.png" rotate={ 5 } subtitle="Shipworks" title="Osiris"/>
+    <CircularMarker cx={ c.x } cy={ c.y } x={ osiris.x } y={ osiris.y } font-size="1" style={ { fontFamily: 'Sexsmith', textTransform: 'uppercase' } } fill="white" href="assets/arcadian_planets_stock_and_vue_7_5_files_by_dmaland_d7qq1bo/arcadiabeta.png" rotate={ 6.2 }  subtitle="Shipworks" title="Osiris"/>
     <CircularMarker cx={ c.x } cy={ c.y } x={ londinium.x } y={ londinium.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planets16_high_resolution/planet22.png" rotate={ 5 } title="Londinium"/>
-    <CircularMarker cx={ c.x } cy={ c.y } x={ liannJuin.x } y={ liannJuin.y } style={ { textTransform: 'uppercase' } } fill="white" rotate={ 5 } href="assets/planets16_high_resolution/planet22.png" title="Liann Juin"/>
+    <CircularMarker cx={ c.x } cy={ c.y } x={ liannJuin.x } y={ liannJuin.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/some-planet-sprites-from-a-failed-project/rock0_1.png" rotate={ 1.56 } title="Liann Juin"/>
     <CircularMarker cx={ c.x } cy={ c.y } x={ bernadette.x } y={ bernadette.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_39.png" rotate={ 2 } title="Bernadette"/>
-    <CircularMarker cx={ c.x } cy={ c.y } x={ shinon.x } y={ shinon.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_39.png" rotate={ 2 } title="Shinon"/>
-    <CircularMarker cx={ c.x } cy={ c.y } x={ bellerophon.x } y={ bellerophon.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/some-planet-sprites-from-a-failed-project/rock0_1.png" rotate={ 1.56 } title="Bellerophon"/>
+    <CircularMarker cx={ c.x } cy={ c.y } x={ shinon.x } y={ shinon.y } style={ { textTransform: 'uppercase' } } href="assets/triplanetary___stock_images_and_vue_7_5_files_by_dmaland_d7rpqrb/bringerofwar-t.png" rotate={ 4.2 } fill="white" title="Shinon"/>
+    <CircularMarker cx={ c.x } cy={ c.y } x={ bellerophon.x } y={ bellerophon.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/arcadian_planets_stock_and_vue_7_5_files_by_dmaland_d7qq1bo/arcadiaalpha-t.png" rotate={ 3.7 } title="Bellerophon"/>
     <CircularMarker cx={ c.x } cy={ c.y } x={ ariel.x } y={ ariel.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/Colorful_planets/spr_planet02.png" rotate={ 5.4 } title="Ariel"/>
     <CircularMarker cx={ c.x } cy={ c.y } x={ valentine.x } y={ valentine.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/Colorful_planets/spr_planet01.png" rotate={ 5.5 } title="Valentine"/>
     <CircularMarker cx={ 65 } cy={ 10 } x={ c.x } y={ c.y } style={ { textTransform: 'uppercase' } } fill="white" size="3" href="assets/main_sequence_high_resolution/star_white02.png" subtitle="西方白虎" title="White Sun"/>
@@ -285,12 +374,12 @@ let heinlein = (
   <g id="heinlein">
     <RadialGrid cx={ heinleinC.x } cy={ heinleinC.y } minR={ 2 } r="5" radialSubdivisions={ 2 } stroke="orange" stroke-width="0.1" minArc={ 36 }></RadialGrid>
     <CircularMarker ox={ redSunC.x } oy={ redSunC.y } cx={ c.x } cy={ c.y } x={ heinleinC.x } y={ heinleinC.y } size="1.6" style={ { textTransform: 'uppercase' } } fill="white" href="assets/main_sequence_high_resolution/star_red04.png" title="Heinlein"/>
-    <CircularMarker cx={ heinleinC.x } cy={ heinleinC.y } x={ silverhold.x } y={ silverhold.y } style={ { fontFamily: 'Insane Rodeo', textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" subtitle="Amunitions" title="Silverhold"/>
-    <CircularMarker cx={ heinleinC.x } cy={ heinleinC.y } x={ triumph.x } y={ triumph.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Triumph"/>
+    <CircularMarker cx={ heinleinC.x } cy={ heinleinC.y } x={ silverhold.x } y={ silverhold.y } style={ { fontFamily: 'Insane Rodeo', textTransform: 'uppercase' } } fill="white" href="assets/arcadian_planets_stock_and_vue_7_5_files_by_dmaland_d7qq1bo/arcadiagamma.png" rotate={ pi*1.5 } subtitle="Amunitions" title="Silverhold"/>
+    <CircularMarker cx={ heinleinC.x } cy={ heinleinC.y } x={ triumph.x } y={ triumph.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/arcadian_planets_stock_and_vue_7_5_files_by_dmaland_d7qq1bo/arcadiadelta.png" rotate={ 4 } title="Triumph"/>
   </g>
 );
 
-let himinbjoergC = place(18.5, pi*1.434, redSunC);
+let himinbjoergC = place(18.5, pi*1.43, redSunC);
 let aesir = place(3.5, pi*1.434, himinbjoergC);
 let brisengamen = place(3.75, pi*.434, himinbjoergC);
 
@@ -410,6 +499,13 @@ let burnham = (
   <g id="reaver-space">
     <ScrapBelt cx={ burnhamC.x } cy={ burnhamC.y } particles={ 500 } spread={ 5 } r={ 6 }></ScrapBelt>
     <RadialGrid cx={ burnhamC.x } cy={ burnhamC.y } minR={ 4 } r={ 7.5 } radialSubdivisions={ 12 } stroke="red" stroke-width="0.1"></RadialGrid>
+    
+    <g opacity=".5">
+      <RadialGrid cx={ burnhamC.x } cy={ burnhamC.y } minR={ 4 } r={ 7.5 } minArc={ 360 / 12 * 2 } maxArc={ 360 / 12 * 11 } radialSubdivisions={ 18 } concentricSubdivisions={ 1 } stroke="red" stroke-width="0.1"></RadialGrid>
+    </g>
+
+    <path fill="url(#alert)" fill-rule="evenodd" d={ circlePath(burnhamC.x, burnhamC.y, 7.5 ) + circlePath(burnhamC.x, burnhamC.y, 4) } />
+    
     <CircularMarker ox={ blueSunC.x } oy={ blueSunC.y } cx={ c.x } cy={ c.y } x={ burnhamC.x } y={ burnhamC.y } style={ { textTransform: 'uppercase' } } fill="white" size="2" href="assets/main_sequence_high_resolution/star_red03.png" title="Burnham"/>
     <CircularMarker cx={ burnhamC.x } cy={ burnhamC.y } x={ burnhamLabel.x } y={ burnhamLabel.y } style={ { textTransform: 'uppercase', fontWeight: '100' } } fill="red" font-size="1.5" subtitle="Reaver Space" title="Burnham Quadrant"/>
     <CircularMarker cx={ burnhamC.x } cy={ burnhamC.y } x={ miranda.x } y={ miranda.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Miranda"/>
@@ -441,6 +537,9 @@ const IndexPage = () => (
     <Map width="1000" height="1400" zoom={ .1 } />
     <svg heigh="0" width="0">
       <defs>
+        <pattern id="alert" patternUnits="userSpaceOnUse" width=".7" height=".7" patternTransform="rotate(25)">
+          <line x1="0" y="0" x2="0" y2=".7" stroke="red" stroke-width=".6" opacity=".25" />
+        </pattern>
         <clipPath id="top-clip" viewBox="0 -11 100 121">
           <path clip-rule="evenodd" d={ circlePath(c.x, c.y, 60) + circlePath(lux.x, lux.y, 4) + circlePath(qin.x, qin.y, 3.25) + circlePath(himinbjoergC.x, himinbjoergC.y, 5) + circlePath(burnhamC.x, burnhamC.y, 7.5) + circlePath(heinleinC.x, heinleinC.y , 5) + circlePath(penglaiC.x, penglaiC.y, 5) + circlePath( murphyC.x, murphyC.y, 4.5) } />
         </clipPath>
