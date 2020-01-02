@@ -8,9 +8,11 @@ import Ship from '../components/ship.js'
 import Map from "../components/map"
 
 let c = {
-  x: 50,
-  y: 50,
+  x: 60,
+  y: 60,
 }
+
+let mapBox = [0, 0, 120, 120];
 
 let pc = {
   x: 750,
@@ -78,7 +80,7 @@ let qinShiHuang = (
       y={ santo.y }
       style={ { textTransform: 'uppercase' } }
       fill="white"
-      href="assets/planet15/planet_38.png"
+      href="assets/NASA/HD_189733_b.png"
     />
     <CircularMarker
       title="秦始皇"
@@ -103,9 +105,9 @@ let oortLabel = place(53.5, pi*.25);
 
 let rim = (
   <g id="rim" clipPath="url(#top-clip)">
-    <AsteroidBelt cx={ 50 } cy={ 50 } particles={ 2000 } spread={ 10 } r={ 54 } />
+    <AsteroidBelt cx={ c.x } cy={ c.y } particles={ 2000 } spread={ 10 } r={ 54 } />
     <g clipPath="url(#bottom-clip)">
-      <RadialGrid cx={ 50 } cy={ 50 } minR={ 48 } r={ 60 } radialSubdivisions={ 32 }  minArc={ 5.625 } stroke="DarkSlateGrey" stroke-width=".1" concentricSubdivisions={ 1 } />
+      <RadialGrid cx={ c.x } cy={ c.y } minR={ 48 } r={ 60 } radialSubdivisions={ 32 }  minArc={ 5.625 } stroke="DarkSlateGrey" stroke-width=".1" concentricSubdivisions={ 1 } />
     </g>
     <CircularMarker cx={ c.x } cy={ c.y } x={ oortLabel.x } y={ oortLabel.y } style={ { textTransform: 'uppercase', fontWeight: '100' } } fill="DarkSlateGrey" font-size="2" subtitle="歐特雲" title="Oort cloud"/>
     <g clipPath="url(#bottom-clip)">
@@ -383,6 +385,7 @@ let himinbjoergC = place(17.7, pi*1.415, redSunC);
 let himinbjoergR = 6;
 let aesir = place(3.5, pi*1.434, himinbjoergC);
 let brisengamen = place(3.75, pi*.434, himinbjoergC);
+let spaceBaazar = place(9.7, pi*1.25, redSunC);
 
 let himinbjoerg = (
   <g id="himinbjoerg">
@@ -403,13 +406,13 @@ let redSun = (
       <RadialGrid cx={ redSunC.x } cy={ redSunC.y } minR={ 5 } r="8" minArc={ 45 } radialSubdivisions={ 4 } stroke="orange" stroke-width="0.1"></RadialGrid>
       <RadialGrid cx={ redSunC.x } cy={ redSunC.y } minR={ 8 } r="12" minArc={ 22.5 } radialSubdivisions={ 8 } stroke="orange" stroke-width="0.1"></RadialGrid>
     </g>
-    <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ 69 } y={ 43 } style={ { fontFamily: 'AnchorJack' } } fill="white" href="assets/Eridani-7-OBJ-552992838/space-bazaar.png" rotate={ pi + pi / 2 } subtitle="Space Bazaar" title="李申的市场" />
+    <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ spaceBaazar.x } y={ spaceBaazar.y } style={ { fontFamily: 'AnchorJack' } } fill="white" href="assets/Eridani-7-OBJ-552992838/space-bazaar.png" rotate={ pi + pi / 2 } subtitle="Space Bazaar" title="李申的市场" />
     <CircularMarker cx={ c.x } cy={ c.y } x={ redSunC.x } y={ redSunC.y } size="3" style={ { textTransform: 'uppercase' } } fill="white" href="assets/main_sequence_high_resolution/star_red04.png" subtitle="南方朱雀" title="Red Sun"/>
-    <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ jiangyn.x } y={ jiangyn.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" subtitle="Jiangyn" title="江阴"/>
-    <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ newMelburne.x } y={ newMelburne.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="New Melburne"/>
+    <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ newMelburne.x } y={ newMelburne.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/ESO/Gliese 667Cb.png" rotate={ pi*1.35 } title="New Melburne"/>
+    <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ jiangyn.x } y={ jiangyn.y } style={ { textTransform: 'uppercase' } } fill="white" rotate={ pi*1.1 } href="assets/NASA/Kepler-452b.png" subtitle="Jiangyn" title="江阴"/>
     <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ harvest.x } y={ harvest.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Harvest"/>
     <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ ansons.x } y={ ansons.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Anson's World"/>
-    <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ albans.x } y={ albans.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="St. Albans"/>
+    <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ albans.x } y={ albans.y } style={ { textTransform: 'uppercase' } } fill="white" rotate={ pi*.95 } href="assets/NASA/Kepler-20f.png" title="St. Albans"/>
     <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ greenleaf.x } y={ greenleaf.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Greenleaf"/>
     <CircularMarker cx={ redSunC.x } cy={ redSunC.y } x={ jubilee.x } y={ jubilee.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Jubilee"/>
     { heinlein }
@@ -527,7 +530,7 @@ let blueSun = (
     <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ muir.x } y={ muir.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Muir"/>
     <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ fury.x } y={ fury.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" title="Fury"/>
     <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ deadwood.x } y={ deadwood.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/hd-hq-2d-planets-hi-res/Ice1.png" title="Deadwood"/>
-    <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ dragonsEgg.x } y={ dragonsEgg.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/hd-hq-2d-planets-hi-res/Lava1.png" title="Dragons Egg"/>
+    <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ dragonsEgg.x } y={ dragonsEgg.y } style={ { textTransform: 'uppercase' } } fill="white" rotate={ 3.5 } href="assets/nasa/Kepler-20e.png" title="Dragons Egg"/>
     { burnham }
   </g>
 );
@@ -535,19 +538,20 @@ let blueSun = (
 const IndexPage = () => (
   <>
     <link rel="stylesheet" href="map.css" />
-    <Map width="1000" height="1400" zoom={ .1 } />
+    <Map width="1000" height="1400" zoom={ 1 } />
     <svg heigh="0" width="0">
       <defs>
         <pattern id="alert" patternUnits="userSpaceOnUse" width=".7" height=".7" patternTransform="rotate(25)">
           <line x1="0" y="0" x2="0" y2=".7" stroke="red" stroke-width=".6" opacity=".25" />
         </pattern>
-        <clipPath id="top-clip" viewBox="0 -11 100 121">
+        <clipPath id="top-clip" viewBox={ mapBox.join(' ') }>
           <path clip-rule="evenodd" d={ circlePath(c.x, c.y, 60) + circlePath(lux.x, lux.y, 4) + circlePath(qin.x, qin.y, 3.25) + circlePath(himinbjoergC.x, himinbjoergC.y, himinbjoergR) + circlePath(burnhamC.x, burnhamC.y, 7.5) + circlePath(heinleinC.x, heinleinC.y , 5) + circlePath(penglaiC.x, penglaiC.y, 5) + circlePath( murphyC.x, murphyC.y, 4.5) } />
         </clipPath>
-        <clipPath id="bottom-clip" viewBox="0 -11 100 121">
+        <clipPath id="bottom-clip" viewBox={ mapBox.join(' ') }>
           <path clip-rule="evenodd" d={ circlePath(c.x, c.y, 60) + circlePath(redSunC.x, redSunC.y, 12) + circlePath(georgiaC.x, georgiaC.y, 12) + circlePath(blueSunC.x, blueSunC.y, 12)  + circlePath(kalidasaC.x, kalidasaC.y, 16) } />
         </clipPath>
-        <symbol id="grid" viewBox="0 -11 100 121">
+        <symbol id="grid" viewBox={ mapBox.join(' ') }>
+          <rect fill="black" x={ mapBox[0] } y={ mapBox[1] } width={ mapBox[2] } height={ mapBox[3] }  />
           { rim }
           { halo }
           { border }

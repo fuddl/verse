@@ -1,5 +1,8 @@
 import React from "react"
 
+let mapSize = 300;
+let mapOffset = 198 + (mapSize / 2 * -1);
+
 class Map extends React.Component {
   constructor(props) {
     super(props);
@@ -93,8 +96,8 @@ class Map extends React.Component {
         data-zoom={ z }
        >
         { background }
-        <use href="#grid" x="0" y="0" height="11189mm" width="11189mm"  />
-        <use href="#slots" x="0" y="0" />
+        <use href="#grid" x={ mapOffset + 'mm' } y={ mapOffset + 'mm' } height={ mapSize + 'mm' } width={ mapSize + 'mm' } />
+        <use href="#slots" x="0" y="0" height="1500" width="1500" />
       </svg>
     )
   }
