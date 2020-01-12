@@ -75,7 +75,7 @@ class marker extends React.Component {
       A = Math.PI - theta;
     } 
     var Offset = (A*r) + 1;
-    let fSize = attributes['font-size'] ? attributes['font-size'] : .5;
+    let fSize = attributes['fontSize'] ? attributes['fontSize'] : .5;
     let dOffset = attributes.href ? 1 : fSize/2 ;
     let tclass = fSize > 1.4 ? 'circular-marker__text--big' : ''; 
 
