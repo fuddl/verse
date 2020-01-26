@@ -100,6 +100,27 @@ let piceil = evenGrid(0, 0, 9, 1, function(i) { return Math.ceil(i * Math.PI) })
 let square = evenGrid(0, 0, 6, 1, function(i) { return Math.pow(i,2); });
 let cubed = evenGrid(0, 0, 3, 1, function(i) { return Math.pow(i,3); });
 let triangle = evenGrid(0, 0, 8, 1, function(i) { return (i * (i + 1)) / 2; });
+let even = evenGrid(0, 0, 8, 1, function(n) {
+  let i = 0;
+  let k = 1;  
+
+  while (i < n) {  
+    i = i + k;  
+    k = k * 2;  
+  }  
+  return (k * 6);  
+});
+
+let odd = evenGrid(0, 0, 13, 1, function(n) {
+  let i = 0;
+  let k = 1;  
+
+  while (i < n) {  
+    i = i + k;  
+    k = k * 3;  
+  }  
+  return (k * 2) -3;  
+});
 
 
 const testPage = () => (
@@ -124,6 +145,8 @@ const testPage = () => (
     <svg height="250" width="250" viewBox="-8 -8 17 17">{ square }</svg>
     <svg height="250" width="250" viewBox="-8 -8 17 17">{ cubed }</svg>
     <svg height="250" width="250" viewBox="-8 -8 17 17">{ triangle }</svg>
+    <svg height="250" width="250" viewBox="-12 -12 24 24">{ even }</svg>
+    <svg height="250" width="250" viewBox="-15 -15 30 30">{ odd }</svg>
   </>
 )
 
