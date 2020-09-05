@@ -609,8 +609,8 @@ let blueSun = (
     <CircularMarker cx={ c.x } cy={ c.y } x={ blueSunC.x } y={ blueSunC.y } size="3" style={ { textTransform: 'uppercase' } } fill="white" href="assets/main_sequence_high_resolution/star_blue03.png" subtitle="青龍" fontSize="0.7" title="Blue Sun"/>
     <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ meridian.x } y={ meridian.y } style={ { textTransform: 'uppercase', fontFamily: 'Omnibus' } } rotate={ pi * .7 } fill="white" href="assets/planet15/planet_38.png" title="Meridian"/>
     <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ newCanaan.x } y={ newCanaan.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" rotate={ pi * .7 } title="New Canaan"/>
-    <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ muir.x } y={ muir.y } style={ { textTransform: 'uppercase' } } fill="white" rotate={ pi * .7 } href="assets/planet15/planet_38.png" title="Muir"/>
-    <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ fury.x } y={ fury.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/planet15/planet_38.png" rotate={ pi * .7 } title="Fury"/>
+    <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ muir.x } y={ muir.y } style={ { textTransform: 'uppercase' } } fill="white" rotate={ pi * .9 }  href="assets/NASA/Kepler-22b.png" title="Muir"/>
+    <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ fury.x } y={ fury.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/ESO/Proxima Centauri b.png" rotate={ pi * 1.15 } title="Fury"/>
     <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ deadwood.x } y={ deadwood.y } style={ { textTransform: 'uppercase' } } fill="white" href="assets/hd-hq-2d-planets-hi-res/Ice1.png" rotate={ pi * 1.7 } title="Deadwood"/>
     <CircularMarker cx={ blueSunC.x } cy={ blueSunC.y } x={ dragonsEgg.x } y={ dragonsEgg.y } style={ { textTransform: 'uppercase' } } fill="white" rotate={ 3.5 } href="assets/nasa/Kepler-20e.png" title="Dragons Egg"/>
     { burnham }

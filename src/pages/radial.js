@@ -19,6 +19,7 @@ function evenGrid(cx, cy, rings, area, divisor) {
           cy={ cy } 
           minR={ last.r ? last.r : 0 }
           r={ r }
+          minArc={ i % 2 == 0 ? 140 : 42 }
           radialSubdivisions={ divisor(i) }
           stroke="black"
           stroke-width={ 1 }
